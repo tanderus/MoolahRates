@@ -7,7 +7,8 @@
 //
 
 import UIKit
+import StoryboardInstantiatable
 
-internal final class HomeViewController: UIViewController {
+internal final class HomeViewController: UIViewController, StoryboardInstantiatable {
     
 }

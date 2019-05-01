@@ -7,16 +7,14 @@
 //
 
 import UIKit
+import StoryboardInstantiatable
 
 public final class Coordinator {
     
     public init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
         
-        let bundle = Bundle(for: HomeScreen.Coordinator.self)
-        let storyboard = UIStoryboard(name: "Main", bundle: bundle)
-        let identifier = String(describing: HomeViewController.self)
-        let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as! HomeViewController
+        let viewController = HomeViewController.instantiateViaStoryboard()
         self.viewController = viewController
     }
     

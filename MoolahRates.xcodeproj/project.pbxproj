@@ -16,6 +16,10 @@
 		51A5289B2279A07000700158 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A5289A2279A07000700158 /* HomeViewController.swift */; };
 		51A5289F2279A17000700158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A5289E2279A17000700158 /* Assets.xcassets */; };
 		51A528A12279A17A00700158 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A528A02279A17A00700158 /* Main.storyboard */; };
+		51CCABD42279DEFF0056C4D9 /* StoryboardInstantiatable.h in Headers */ = {isa = PBXBuildFile; fileRef = 51CCABD22279DEFF0056C4D9 /* StoryboardInstantiatable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		51CCABD72279DEFF0056C4D9 /* StoryboardInstantiatable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51CCABD02279DEFF0056C4D9 /* StoryboardInstantiatable.framework */; };
+		51CCABD82279DEFF0056C4D9 /* StoryboardInstantiatable.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 51CCABD02279DEFF0056C4D9 /* StoryboardInstantiatable.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		51CCABE02279DF510056C4D9 /* StoryboardInstantiatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CCABDF2279DF510056C4D9 /* StoryboardInstantiatable.swift */; };
 		9CF8414D80461AC449C6F24A /* Pods_MoolahRates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98750754F0A7F505D8017D9 /* Pods_MoolahRates.framework */; };
 		F19B7E394633808E63BCB48B /* Pods_HomeScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D5914D547E2129A26DDAD7 /* Pods_HomeScreen.framework */; };
 /* End PBXBuildFile section */
@@ -28,6 +32,20 @@
 			remoteGlobalIDString = 51A5287022799E4300700158;
 			remoteInfo = HomeScreen;
 		};
+		51CCABD52279DEFF0056C4D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51CCABCF2279DEFF0056C4D9;
+			remoteInfo = StoryboardInstantiatable;
+		};
+		51CCABDC2279DF410056C4D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51CCABCF2279DEFF0056C4D9;
+			remoteInfo = StoryboardInstantiatable;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +55,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				51CCABD82279DEFF0056C4D9 /* StoryboardInstantiatable.framework in Embed Frameworks */,
 				51A5287922799E4300700158 /* HomeScreen.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -57,6 +76,10 @@
 		51A5289A2279A07000700158 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		51A5289E2279A17000700158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51A528A02279A17A00700158 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		51CCABD02279DEFF0056C4D9 /* StoryboardInstantiatable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StoryboardInstantiatable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51CCABD22279DEFF0056C4D9 /* StoryboardInstantiatable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoryboardInstantiatable.h; sourceTree = "<group>"; };
+		51CCABD32279DEFF0056C4D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51CCABDF2279DF510056C4D9 /* StoryboardInstantiatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiatable.swift; sourceTree = "<group>"; };
 		6926251D3B502A27347CB25D /* Pods-HomeScreen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeScreen.release.xcconfig"; path = "Target Support Files/Pods-HomeScreen/Pods-HomeScreen.release.xcconfig"; sourceTree = "<group>"; };
 		8CE2288549ED42DCD1FD19E5 /* Pods-MoolahRates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoolahRates.debug.xcconfig"; path = "Target Support Files/Pods-MoolahRates/Pods-MoolahRates.debug.xcconfig"; sourceTree = "<group>"; };
 		C0D5914D547E2129A26DDAD7 /* Pods_HomeScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51CCABD72279DEFF0056C4D9 /* StoryboardInstantiatable.framework in Frameworks */,
 				51A5287822799E4300700158 /* HomeScreen.framework in Frameworks */,
 				9CF8414D80461AC449C6F24A /* Pods_MoolahRates.framework in Frameworks */,
 			);
@@ -82,6 +106,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51CCABCD2279DEFF0056C4D9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -89,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				51A5285922799D1F00700158 /* MoolahRates */,
+				51CCABD12279DEFF0056C4D9 /* StoryboardInstantiatable */,
 				51A5287222799E4300700158 /* HomeScreen */,
 				51A5285822799D1F00700158 /* Products */,
 				90B5E46A99AC02397257FF88 /* Pods */,
@@ -101,6 +133,7 @@
 			children = (
 				51A5285722799D1F00700158 /* MoolahRates.app */,
 				51A5287122799E4300700158 /* HomeScreen.framework */,
+				51CCABD02279DEFF0056C4D9 /* StoryboardInstantiatable.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -168,6 +201,24 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		51CCABD12279DEFF0056C4D9 /* StoryboardInstantiatable */ = {
+			isa = PBXGroup;
+			children = (
+				51CCABD22279DEFF0056C4D9 /* StoryboardInstantiatable.h */,
+				51CCABDE2279DF450056C4D9 /* Public */,
+				51CCABD32279DEFF0056C4D9 /* Info.plist */,
+			);
+			path = StoryboardInstantiatable;
+			sourceTree = "<group>";
+		};
+		51CCABDE2279DF450056C4D9 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				51CCABDF2279DF510056C4D9 /* StoryboardInstantiatable.swift */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
 		90B5E46A99AC02397257FF88 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,7 +227,6 @@
 				8CE2288549ED42DCD1FD19E5 /* Pods-MoolahRates.debug.xcconfig */,
 				D7300AF6D853A05367D2CD29 /* Pods-MoolahRates.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -200,6 +250,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51CCABCB2279DEFF0056C4D9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51CCABD42279DEFF0056C4D9 /* StoryboardInstantiatable.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -217,6 +275,7 @@
 			);
 			dependencies = (
 				51A5287722799E4300700158 /* PBXTargetDependency */,
+				51CCABD62279DEFF0056C4D9 /* PBXTargetDependency */,
 			);
 			name = MoolahRates;
 			productName = MoolahRates;
@@ -236,10 +295,29 @@
 			buildRules = (
 			);
 			dependencies = (
+				51CCABDD2279DF410056C4D9 /* PBXTargetDependency */,
 			);
 			name = HomeScreen;
 			productName = HomeScreen;
 			productReference = 51A5287122799E4300700158 /* HomeScreen.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		51CCABCF2279DEFF0056C4D9 /* StoryboardInstantiatable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51CCABD92279DEFF0056C4D9 /* Build configuration list for PBXNativeTarget "StoryboardInstantiatable" */;
+			buildPhases = (
+				51CCABCB2279DEFF0056C4D9 /* Headers */,
+				51CCABCC2279DEFF0056C4D9 /* Sources */,
+				51CCABCD2279DEFF0056C4D9 /* Frameworks */,
+				51CCABCE2279DEFF0056C4D9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StoryboardInstantiatable;
+			productName = StoryboardInstantiatable;
+			productReference = 51CCABD02279DEFF0056C4D9 /* StoryboardInstantiatable.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -259,6 +337,10 @@
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
 					};
+					51CCABCF2279DEFF0056C4D9 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
 				};
 			};
 			buildConfigurationList = 51A5285222799D1F00700158 /* Build configuration list for PBXProject "MoolahRates" */;
@@ -275,6 +357,7 @@
 			projectRoot = "";
 			targets = (
 				51A5285622799D1F00700158 /* MoolahRates */,
+				51CCABCF2279DEFF0056C4D9 /* StoryboardInstantiatable */,
 				51A5287022799E4300700158 /* HomeScreen */,
 			);
 		};
@@ -295,6 +378,13 @@
 			files = (
 				51A5289F2279A17000700158 /* Assets.xcassets in Resources */,
 				51A528A12279A17A00700158 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51CCABCE2279DEFF0056C4D9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +455,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51CCABCC2279DEFF0056C4D9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51CCABE02279DF510056C4D9 /* StoryboardInstantiatable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -372,6 +470,16 @@
 			isa = PBXTargetDependency;
 			target = 51A5287022799E4300700158 /* HomeScreen */;
 			targetProxy = 51A5287622799E4300700158 /* PBXContainerItemProxy */;
+		};
+		51CCABD62279DEFF0056C4D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51CCABCF2279DEFF0056C4D9 /* StoryboardInstantiatable */;
+			targetProxy = 51CCABD52279DEFF0056C4D9 /* PBXContainerItemProxy */;
+		};
+		51CCABDD2279DF410056C4D9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51CCABCF2279DEFF0056C4D9 /* StoryboardInstantiatable */;
+			targetProxy = 51CCABDC2279DF410056C4D9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -597,6 +705,67 @@
 			};
 			name = Release;
 		};
+		51CCABDA2279DEFF0056C4D9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = StoryboardInstantiatable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.krasnobrovkin.pavel.StoryboardInstantiatable;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		51CCABDB2279DEFF0056C4D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = StoryboardInstantiatable/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.krasnobrovkin.pavel.StoryboardInstantiatable;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -623,6 +792,15 @@
 			buildConfigurations = (
 				51A5287B22799E4300700158 /* Debug */,
 				51A5287C22799E4300700158 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51CCABD92279DEFF0056C4D9 /* Build configuration list for PBXNativeTarget "StoryboardInstantiatable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51CCABDA2279DEFF0056C4D9 /* Debug */,
+				51CCABDB2279DEFF0056C4D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
