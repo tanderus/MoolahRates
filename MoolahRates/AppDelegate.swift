@@ -9,6 +9,8 @@
 import UIKit
 import HomeScreen
 
+import CurrencyCode
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
