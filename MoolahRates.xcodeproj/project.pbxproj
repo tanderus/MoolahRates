@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,8 +27,9 @@
 		51CCAC002279E1F50056C4D9 /* CurrencyCode.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 51CCABF82279E1F50056C4D9 /* CurrencyCode.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		51CCAC082279E2210056C4D9 /* CurrencyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CCAC072279E2210056C4D9 /* CurrencyCode.swift */; };
 		51CCAC0A2279E2AF0056C4D9 /* CurrencyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CCAC092279E2AF0056C4D9 /* CurrencyPair.swift */; };
-		9CF8414D80461AC449C6F24A /* Pods_MoolahRates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C98750754F0A7F505D8017D9 /* Pods_MoolahRates.framework */; };
-		F19B7E394633808E63BCB48B /* Pods_HomeScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D5914D547E2129A26DDAD7 /* Pods_HomeScreen.framework */; };
+		51F16912227A15C600DA8719 /* CurrencyCodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F16911227A15C600DA8719 /* CurrencyCodeTests.swift */; };
+		73E37B9D9B047760D01858AD /* Pods_HomeScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A4D92E035B8F375E235A01 /* Pods_HomeScreen.framework */; };
+		A950D6AB06368FE00FA75E93 /* Pods_MoolahRates.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75AA53EBB0E5A623CBCBA096 /* Pods_MoolahRates.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,20 @@
 			remoteGlobalIDString = 51CCABF72279E1F50056C4D9;
 			remoteInfo = CurrencyCode;
 		};
+		51F16914227A15C600DA8719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51A5285622799D1F00700158;
+			remoteInfo = MoolahRates;
+		};
+		51F16919227A163600DA8719 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51CCABF72279E1F50056C4D9;
+			remoteInfo = CurrencyCode;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -86,7 +101,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1FED0539F9B2D96216D925C6 /* Pods-HomeScreen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeScreen.debug.xcconfig"; path = "Target Support Files/Pods-HomeScreen/Pods-HomeScreen.debug.xcconfig"; sourceTree = "<group>"; };
+		514454B1227A03F800F69A70 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		514454B3227A040200F69A70 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		51A5285722799D1F00700158 /* MoolahRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoolahRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A5285A22799D1F00700158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51A5286122799D2100700158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,11 +125,15 @@
 		51CCABFB2279E1F50056C4D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		51CCAC072279E2210056C4D9 /* CurrencyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCode.swift; sourceTree = "<group>"; };
 		51CCAC092279E2AF0056C4D9 /* CurrencyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPair.swift; sourceTree = "<group>"; };
-		6926251D3B502A27347CB25D /* Pods-HomeScreen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeScreen.release.xcconfig"; path = "Target Support Files/Pods-HomeScreen/Pods-HomeScreen.release.xcconfig"; sourceTree = "<group>"; };
-		8CE2288549ED42DCD1FD19E5 /* Pods-MoolahRates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoolahRates.debug.xcconfig"; path = "Target Support Files/Pods-MoolahRates/Pods-MoolahRates.debug.xcconfig"; sourceTree = "<group>"; };
-		C0D5914D547E2129A26DDAD7 /* Pods_HomeScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C98750754F0A7F505D8017D9 /* Pods_MoolahRates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoolahRates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7300AF6D853A05367D2CD29 /* Pods-MoolahRates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoolahRates.release.xcconfig"; path = "Target Support Files/Pods-MoolahRates/Pods-MoolahRates.release.xcconfig"; sourceTree = "<group>"; };
+		51F1690F227A15C500DA8719 /* MoolahRatesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoolahRatesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		51F16911227A15C600DA8719 /* CurrencyCodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCodeTests.swift; sourceTree = "<group>"; };
+		51F16913227A15C600DA8719 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75AA53EBB0E5A623CBCBA096 /* Pods_MoolahRates.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoolahRates.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A549F9C76E76BB34B5933E8 /* Pods-HomeScreen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeScreen.release.xcconfig"; path = "Target Support Files/Pods-HomeScreen/Pods-HomeScreen.release.xcconfig"; sourceTree = "<group>"; };
+		C36B08E813535AB68DF429B3 /* Pods-MoolahRates.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoolahRates.debug.xcconfig"; path = "Target Support Files/Pods-MoolahRates/Pods-MoolahRates.debug.xcconfig"; sourceTree = "<group>"; };
+		C532D5E5166A21B9B1BB1D45 /* Pods-HomeScreen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HomeScreen.debug.xcconfig"; path = "Target Support Files/Pods-HomeScreen/Pods-HomeScreen.debug.xcconfig"; sourceTree = "<group>"; };
+		C5A4D92E035B8F375E235A01 /* Pods_HomeScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HomeScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0E8E9C073D65E52636EAE4C /* Pods-MoolahRates.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoolahRates.release.xcconfig"; path = "Target Support Files/Pods-MoolahRates/Pods-MoolahRates.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +144,7 @@
 				51CCABFF2279E1F50056C4D9 /* CurrencyCode.framework in Frameworks */,
 				51CCABD72279DEFF0056C4D9 /* StoryboardInstantiatable.framework in Frameworks */,
 				51A5287822799E4300700158 /* HomeScreen.framework in Frameworks */,
-				9CF8414D80461AC449C6F24A /* Pods_MoolahRates.framework in Frameworks */,
+				A950D6AB06368FE00FA75E93 /* Pods_MoolahRates.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F19B7E394633808E63BCB48B /* Pods_HomeScreen.framework in Frameworks */,
+				73E37B9D9B047760D01858AD /* Pods_HomeScreen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +170,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51F1690C227A15C500DA8719 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -160,9 +187,10 @@
 				51CCABF92279E1F50056C4D9 /* CurrencyCode */,
 				51CCABD12279DEFF0056C4D9 /* StoryboardInstantiatable */,
 				51A5287222799E4300700158 /* HomeScreen */,
+				51F16910227A15C600DA8719 /* MoolahRatesTests */,
 				51A5285822799D1F00700158 /* Products */,
-				90B5E46A99AC02397257FF88 /* Pods */,
 				E5822EFB70295355D8EE6BDA /* Frameworks */,
+				A867233C3079D207B5F5E1AB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +201,7 @@
 				51A5287122799E4300700158 /* HomeScreen.framework */,
 				51CCABD02279DEFF0056C4D9 /* StoryboardInstantiatable.framework */,
 				51CCABF82279E1F50056C4D9 /* CurrencyCode.framework */,
+				51F1690F227A15C500DA8719 /* MoolahRatesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -287,22 +316,34 @@
 			path = Public;
 			sourceTree = "<group>";
 		};
-		90B5E46A99AC02397257FF88 /* Pods */ = {
+		51F16910227A15C600DA8719 /* MoolahRatesTests */ = {
 			isa = PBXGroup;
 			children = (
-				1FED0539F9B2D96216D925C6 /* Pods-HomeScreen.debug.xcconfig */,
-				6926251D3B502A27347CB25D /* Pods-HomeScreen.release.xcconfig */,
-				8CE2288549ED42DCD1FD19E5 /* Pods-MoolahRates.debug.xcconfig */,
-				D7300AF6D853A05367D2CD29 /* Pods-MoolahRates.release.xcconfig */,
+				51F16911227A15C600DA8719 /* CurrencyCodeTests.swift */,
+				51F16913227A15C600DA8719 /* Info.plist */,
 			);
+			path = MoolahRatesTests;
+			sourceTree = "<group>";
+		};
+		A867233C3079D207B5F5E1AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C532D5E5166A21B9B1BB1D45 /* Pods-HomeScreen.debug.xcconfig */,
+				8A549F9C76E76BB34B5933E8 /* Pods-HomeScreen.release.xcconfig */,
+				C36B08E813535AB68DF429B3 /* Pods-MoolahRates.debug.xcconfig */,
+				F0E8E9C073D65E52636EAE4C /* Pods-MoolahRates.release.xcconfig */,
+			);
+			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		E5822EFB70295355D8EE6BDA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C0D5914D547E2129A26DDAD7 /* Pods_HomeScreen.framework */,
-				C98750754F0A7F505D8017D9 /* Pods_MoolahRates.framework */,
+				514454B3227A040200F69A70 /* CoreMedia.framework */,
+				514454B1227A03F800F69A70 /* XCTest.framework */,
+				C5A4D92E035B8F375E235A01 /* Pods_HomeScreen.framework */,
+				75AA53EBB0E5A623CBCBA096 /* Pods_MoolahRates.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -341,7 +382,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51A5286922799D2100700158 /* Build configuration list for PBXNativeTarget "MoolahRates" */;
 			buildPhases = (
-				C7DFE988CF23E659C81A5A55 /* [CP] Check Pods Manifest.lock */,
+				395A3CD97BA1EA5515E2CF73 /* [CP] Check Pods Manifest.lock */,
 				51A5285322799D1F00700158 /* Sources */,
 				51A5285422799D1F00700158 /* Frameworks */,
 				51A5285522799D1F00700158 /* Resources */,
@@ -363,7 +404,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51A5287A22799E4300700158 /* Build configuration list for PBXNativeTarget "HomeScreen" */;
 			buildPhases = (
-				0D4763D9A1B25D27B26EA2E7 /* [CP] Check Pods Manifest.lock */,
+				B6FDD6906C762DD66759FDC5 /* [CP] Check Pods Manifest.lock */,
 				51A5286C22799E4300700158 /* Headers */,
 				51A5286D22799E4300700158 /* Sources */,
 				51A5286E22799E4300700158 /* Frameworks */,
@@ -416,6 +457,25 @@
 			productReference = 51CCABF82279E1F50056C4D9 /* CurrencyCode.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		51F1690E227A15C500DA8719 /* MoolahRatesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 51F16918227A15C600DA8719 /* Build configuration list for PBXNativeTarget "MoolahRatesTests" */;
+			buildPhases = (
+				51F1690B227A15C500DA8719 /* Sources */,
+				51F1690C227A15C500DA8719 /* Frameworks */,
+				51F1690D227A15C500DA8719 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				51F16915227A15C600DA8719 /* PBXTargetDependency */,
+				51F1691A227A163600DA8719 /* PBXTargetDependency */,
+			);
+			name = MoolahRatesTests;
+			productName = MoolahRatesTests;
+			productReference = 51F1690F227A15C500DA8719 /* MoolahRatesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -441,10 +501,14 @@
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
 					};
+					51F1690E227A15C500DA8719 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 51A5285622799D1F00700158;
+					};
 				};
 			};
 			buildConfigurationList = 51A5285222799D1F00700158 /* Build configuration list for PBXProject "MoolahRates" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -460,6 +524,7 @@
 				51CCABF72279E1F50056C4D9 /* CurrencyCode */,
 				51CCABCF2279DEFF0056C4D9 /* StoryboardInstantiatable */,
 				51A5287022799E4300700158 /* HomeScreen */,
+				51F1690E227A15C500DA8719 /* MoolahRatesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -496,32 +561,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0D4763D9A1B25D27B26EA2E7 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
+		51F1690D227A15C500DA8719 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HomeScreen-checkManifestLockResult.txt",
-			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
 		};
-		C7DFE988CF23E659C81A5A55 /* [CP] Check Pods Manifest.lock */ = {
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		395A3CD97BA1EA5515E2CF73 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -537,6 +587,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MoolahRates-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6FDD6906C762DD66759FDC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HomeScreen-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -582,6 +654,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		51F1690B227A15C500DA8719 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51F16912227A15C600DA8719 /* CurrencyCodeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -609,6 +689,16 @@
 			isa = PBXTargetDependency;
 			target = 51CCABF72279E1F50056C4D9 /* CurrencyCode */;
 			targetProxy = 51CCAC042279E20B0056C4D9 /* PBXContainerItemProxy */;
+		};
+		51F16915227A15C600DA8719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51A5285622799D1F00700158 /* MoolahRates */;
+			targetProxy = 51F16914227A15C600DA8719 /* PBXContainerItemProxy */;
+		};
+		51F1691A227A163600DA8719 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51CCABF72279E1F50056C4D9 /* CurrencyCode */;
+			targetProxy = 51F16919227A163600DA8719 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -731,12 +821,12 @@
 		};
 		51A5286A22799D2100700158 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CE2288549ED42DCD1FD19E5 /* Pods-MoolahRates.debug.xcconfig */;
+			baseConfigurationReference = C36B08E813535AB68DF429B3 /* Pods-MoolahRates.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = QCADF8QGVG;
 				INFOPLIST_FILE = MoolahRates/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -745,6 +835,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.krasnobrovkin.pavel.MoolahRates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "MoolahRates dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -752,12 +843,13 @@
 		};
 		51A5286B22799D2100700158 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D7300AF6D853A05367D2CD29 /* Pods-MoolahRates.release.xcconfig */;
+			baseConfigurationReference = F0E8E9C073D65E52636EAE4C /* Pods-MoolahRates.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = QCADF8QGVG;
 				INFOPLIST_FILE = MoolahRates/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -766,6 +858,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.krasnobrovkin.pavel.MoolahRates;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "MoolahRates AppStore";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -773,7 +866,7 @@
 		};
 		51A5287B22799E4300700158 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1FED0539F9B2D96216D925C6 /* Pods-HomeScreen.debug.xcconfig */;
+			baseConfigurationReference = C532D5E5166A21B9B1BB1D45 /* Pods-HomeScreen.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -805,7 +898,7 @@
 		};
 		51A5287C22799E4300700158 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6926251D3B502A27347CB25D /* Pods-HomeScreen.release.xcconfig */;
+			baseConfigurationReference = 8A549F9C76E76BB34B5933E8 /* Pods-HomeScreen.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -956,6 +1049,51 @@
 			};
 			name = Release;
 		};
+		51F16916227A15C600DA8719 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = QCADF8QGVG;
+				INFOPLIST_FILE = MoolahRatesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.krasnobrovkin.pavel.MoolahRatesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoolahRates.app/MoolahRates";
+			};
+			name = Debug;
+		};
+		51F16917227A15C600DA8719 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = QCADF8QGVG;
+				INFOPLIST_FILE = MoolahRatesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.krasnobrovkin.pavel.MoolahRatesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MoolahRates.app/MoolahRates";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1000,6 +1138,15 @@
 			buildConfigurations = (
 				51CCAC022279E1F50056C4D9 /* Debug */,
 				51CCAC032279E1F50056C4D9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		51F16918227A15C600DA8719 /* Build configuration list for PBXNativeTarget "MoolahRatesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				51F16916227A15C600DA8719 /* Debug */,
+				51F16917227A15C600DA8719 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
