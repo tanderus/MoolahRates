@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5138E669227C64DD00577025 /* DatabaseService.h in Headers */ = {isa = PBXBuildFile; fileRef = 5138E667227C64DD00577025 /* DatabaseService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5138E66C227C64DD00577025 /* DatabaseService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5138E665227C64DC00577025 /* DatabaseService.framework */; };
+		5138E66D227C64DD00577025 /* DatabaseService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5138E665227C64DC00577025 /* DatabaseService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5138E678227C652E00577025 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E677227C652E00577025 /* DatabaseService.swift */; };
+		5138E67A227C65D300577025 /* DatabaseObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E679227C65D300577025 /* DatabaseObserver.swift */; };
+		5138E67C227C668400577025 /* DatabaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E67B227C668400577025 /* DatabaseImplementation.swift */; };
+		5138E680227C6E9D00577025 /* FileManager+StoreURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E67F227C6E9D00577025 /* FileManager+StoreURL.swift */; };
+		5138E688227C6F1900577025 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5138E683227C6F1800577025 /* Database.xcdatamodeld */; };
+		5138E68E227C701100577025 /* Rate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E68A227C701100577025 /* Rate+CoreDataClass.swift */; };
+		5138E68F227C701100577025 /* Rate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E68B227C701100577025 /* Rate+CoreDataProperties.swift */; };
+		5138E690227C701100577025 /* RatesOrder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E68C227C701100577025 /* RatesOrder+CoreDataClass.swift */; };
+		5138E691227C701100577025 /* RatesOrder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E68D227C701100577025 /* RatesOrder+CoreDataProperties.swift */; };
+		5138E693227C711D00577025 /* DatabaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E692227C711D00577025 /* DatabaseError.swift */; };
+		5138E695227C728800577025 /* Initialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E694227C728800577025 /* Initialize.swift */; };
+		5138E697227C754100577025 /* LatestRatesSorted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E696227C754100577025 /* LatestRatesSorted.swift */; };
+		5138E699227C771500577025 /* CurrencyRate+InitFromEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E698227C771500577025 /* CurrencyRate+InitFromEntity.swift */; };
+		5138E69D227C79DC00577025 /* DatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E69C227C79DC00577025 /* DatabaseTests.swift */; };
+		5138E69F227C7E5700577025 /* NSManagedObject+InitWithContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E69E227C7E5700577025 /* NSManagedObject+InitWithContext.swift */; };
+		5138E6A1227C804C00577025 /* CreateNewRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E6A0227C804C00577025 /* CreateNewRate.swift */; };
+		5138E6A3227C808D00577025 /* UpdateRateWith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E6A2227C808D00577025 /* UpdateRateWith.swift */; };
+		5138E6A5227C80D100577025 /* DeleteRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5138E6A4227C80D100577025 /* DeleteRate.swift */; };
 		513D5A82227BFCDC00D70DE6 /* AddCurrencyPairCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513D5A81227BFCDC00D70DE6 /* AddCurrencyPairCell.swift */; };
 		513D5A84227BFE9E00D70DE6 /* ExchangeRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513D5A83227BFE9E00D70DE6 /* ExchangeRateCell.swift */; };
 		513D5A8E227C02AB00D70DE6 /* SelectCurrencyScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 513D5A8C227C02AB00D70DE6 /* SelectCurrencyScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -54,12 +75,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		513D5A8F227C02AB00D70DE6 /* PBXContainerItemProxy */ = {
+		5138E671227C650E00577025 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 513D5A89227C02AB00D70DE6;
-			remoteInfo = SelectCurrencyScreen;
+			remoteGlobalIDString = 51CCABF72279E1F50056C4D9;
+			remoteInfo = CurrencyCode;
+		};
+		5138E673227C650E00577025 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51E2059A227AD18600E0046C;
+			remoteInfo = CurrencyRate;
+		};
+		5138E69A227C79C400577025 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5138E664227C64DC00577025;
+			remoteInfo = DatabaseService;
 		};
 		513D5A9A227C02DA00D70DE6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -74,13 +109,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 51CCABF72279E1F50056C4D9;
 			remoteInfo = CurrencyCode;
-		};
-		513D5AB0227C0C1400D70DE6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 513D5AAA227C0C1300D70DE6;
-			remoteInfo = CalculatorScreen;
 		};
 		513D5AB7227C0C3C00D70DE6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -110,13 +138,6 @@
 			remoteGlobalIDString = 51A5287022799E4300700158;
 			remoteInfo = HomeScreen;
 		};
-		51CCABD52279DEFF0056C4D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 51CCABCF2279DEFF0056C4D9;
-			remoteInfo = StoryboardInstantiatable;
-		};
 		51CCABDC2279DF410056C4D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
@@ -124,26 +145,12 @@
 			remoteGlobalIDString = 51CCABCF2279DEFF0056C4D9;
 			remoteInfo = StoryboardInstantiatable;
 		};
-		51CCABFD2279E1F50056C4D9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 51CCABF72279E1F50056C4D9;
-			remoteInfo = CurrencyCode;
-		};
 		51CCAC042279E20B0056C4D9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 51CCABF72279E1F50056C4D9;
 			remoteInfo = CurrencyCode;
-		};
-		51E205A0227AD18700E0046C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 51E2059A227AD18600E0046C;
-			remoteInfo = CurrencyRate;
 		};
 		51E205A7227AD1A300E0046C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -185,6 +192,7 @@
 				513D5A92227C02AB00D70DE6 /* SelectCurrencyScreen.framework in Embed Frameworks */,
 				51CCABD82279DEFF0056C4D9 /* StoryboardInstantiatable.framework in Embed Frameworks */,
 				51E205A3227AD18700E0046C /* CurrencyRate.framework in Embed Frameworks */,
+				5138E66D227C64DD00577025 /* DatabaseService.framework in Embed Frameworks */,
 				51A5287922799E4300700158 /* HomeScreen.framework in Embed Frameworks */,
 				513D5AB3227C0C1400D70DE6 /* CalculatorScreen.framework in Embed Frameworks */,
 				51CCAC002279E1F50056C4D9 /* CurrencyCode.framework in Embed Frameworks */,
@@ -195,6 +203,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5138E665227C64DC00577025 /* DatabaseService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DatabaseService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5138E667227C64DD00577025 /* DatabaseService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DatabaseService.h; sourceTree = "<group>"; };
+		5138E668227C64DD00577025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5138E677227C652E00577025 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		5138E679227C65D300577025 /* DatabaseObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseObserver.swift; sourceTree = "<group>"; };
+		5138E67B227C668400577025 /* DatabaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseImplementation.swift; sourceTree = "<group>"; };
+		5138E67F227C6E9D00577025 /* FileManager+StoreURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+StoreURL.swift"; sourceTree = "<group>"; };
+		5138E684227C6F1800577025 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
+		5138E68A227C701100577025 /* Rate+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rate+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5138E68B227C701100577025 /* Rate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Rate+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5138E68C227C701100577025 /* RatesOrder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RatesOrder+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5138E68D227C701100577025 /* RatesOrder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RatesOrder+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5138E692227C711D00577025 /* DatabaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseError.swift; sourceTree = "<group>"; };
+		5138E694227C728800577025 /* Initialize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Initialize.swift; sourceTree = "<group>"; };
+		5138E696227C754100577025 /* LatestRatesSorted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestRatesSorted.swift; sourceTree = "<group>"; };
+		5138E698227C771500577025 /* CurrencyRate+InitFromEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CurrencyRate+InitFromEntity.swift"; sourceTree = "<group>"; };
+		5138E69C227C79DC00577025 /* DatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseTests.swift; sourceTree = "<group>"; };
+		5138E69E227C7E5700577025 /* NSManagedObject+InitWithContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+InitWithContext.swift"; sourceTree = "<group>"; };
+		5138E6A0227C804C00577025 /* CreateNewRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewRate.swift; sourceTree = "<group>"; };
+		5138E6A2227C808D00577025 /* UpdateRateWith.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateRateWith.swift; sourceTree = "<group>"; };
+		5138E6A4227C80D100577025 /* DeleteRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteRate.swift; sourceTree = "<group>"; };
 		513D5A81227BFCDC00D70DE6 /* AddCurrencyPairCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCurrencyPairCell.swift; sourceTree = "<group>"; };
 		513D5A83227BFE9E00D70DE6 /* ExchangeRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCell.swift; sourceTree = "<group>"; };
 		513D5A8A227C02AB00D70DE6 /* SelectCurrencyScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SelectCurrencyScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +281,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5138E662227C64DC00577025 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		513D5A87227C02AB00D70DE6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,6 +309,7 @@
 				51CCABFF2279E1F50056C4D9 /* CurrencyCode.framework in Frameworks */,
 				513D5AB2227C0C1400D70DE6 /* CalculatorScreen.framework in Frameworks */,
 				51CCABD72279DEFF0056C4D9 /* StoryboardInstantiatable.framework in Frameworks */,
+				5138E66C227C64DD00577025 /* DatabaseService.framework in Frameworks */,
 				51A5287822799E4300700158 /* HomeScreen.framework in Frameworks */,
 				51E205A2227AD18700E0046C /* CurrencyRate.framework in Frameworks */,
 				A950D6AB06368FE00FA75E93 /* Pods_MoolahRates.framework in Frameworks */,
@@ -319,6 +356,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5138E666227C64DD00577025 /* DatabaseService */ = {
+			isa = PBXGroup;
+			children = (
+				5138E667227C64DD00577025 /* DatabaseService.h */,
+				5138E675227C651100577025 /* Public */,
+				5138E676227C651600577025 /* Internal */,
+				5138E668227C64DD00577025 /* Info.plist */,
+			);
+			path = DatabaseService;
+			sourceTree = "<group>";
+		};
+		5138E675227C651100577025 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				5138E677227C652E00577025 /* DatabaseService.swift */,
+				5138E679227C65D300577025 /* DatabaseObserver.swift */,
+				5138E692227C711D00577025 /* DatabaseError.swift */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		5138E676227C651600577025 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				5138E67E227C6E8A00577025 /* Database */,
+				5138E67F227C6E9D00577025 /* FileManager+StoreURL.swift */,
+				5138E69E227C7E5700577025 /* NSManagedObject+InitWithContext.swift */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		5138E67D227C6E5E00577025 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5138E68A227C701100577025 /* Rate+CoreDataClass.swift */,
+				5138E68B227C701100577025 /* Rate+CoreDataProperties.swift */,
+				5138E698227C771500577025 /* CurrencyRate+InitFromEntity.swift */,
+				5138E68C227C701100577025 /* RatesOrder+CoreDataClass.swift */,
+				5138E68D227C701100577025 /* RatesOrder+CoreDataProperties.swift */,
+				5138E683227C6F1800577025 /* Database.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5138E67E227C6E8A00577025 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				5138E67B227C668400577025 /* DatabaseImplementation.swift */,
+				5138E694227C728800577025 /* Initialize.swift */,
+				5138E696227C754100577025 /* LatestRatesSorted.swift */,
+				5138E6A0227C804C00577025 /* CreateNewRate.swift */,
+				5138E6A2227C808D00577025 /* UpdateRateWith.swift */,
+				5138E6A4227C80D100577025 /* DeleteRate.swift */,
+				5138E67D227C6E5E00577025 /* Model */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		513D5A8B227C02AB00D70DE6 /* SelectCurrencyScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -390,6 +485,7 @@
 		513D5AC6227C16CD00D70DE6 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				5138E666227C64DD00577025 /* DatabaseService */,
 				51CCABF92279E1F50056C4D9 /* CurrencyCode */,
 				51E2059C227AD18700E0046C /* CurrencyRate */,
 				51CCABD12279DEFF0056C4D9 /* StoryboardInstantiatable */,
@@ -421,6 +517,7 @@
 				51E2059B227AD18600E0046C /* CurrencyRate.framework */,
 				513D5A8A227C02AB00D70DE6 /* SelectCurrencyScreen.framework */,
 				513D5AAB227C0C1300D70DE6 /* CalculatorScreen.framework */,
+				5138E665227C64DC00577025 /* DatabaseService.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -560,6 +657,7 @@
 			children = (
 				51F16911227A15C600DA8719 /* CurrencyCodeTests.swift */,
 				51E205AE227AD50300E0046C /* CurrencyRateTests.swift */,
+				5138E69C227C79DC00577025 /* DatabaseTests.swift */,
 				51F16913227A15C600DA8719 /* Info.plist */,
 			);
 			path = MoolahRatesTests;
@@ -590,6 +688,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		5138E660227C64DC00577025 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5138E669227C64DD00577025 /* DatabaseService.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		513D5A85227C02AB00D70DE6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -641,6 +747,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		5138E664227C64DC00577025 /* DatabaseService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5138E670227C64DD00577025 /* Build configuration list for PBXNativeTarget "DatabaseService" */;
+			buildPhases = (
+				5138E660227C64DC00577025 /* Headers */,
+				5138E661227C64DC00577025 /* Sources */,
+				5138E662227C64DC00577025 /* Frameworks */,
+				5138E663227C64DC00577025 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5138E672227C650E00577025 /* PBXTargetDependency */,
+				5138E674227C650E00577025 /* PBXTargetDependency */,
+			);
+			name = DatabaseService;
+			productName = DatabaseService;
+			productReference = 5138E665227C64DC00577025 /* DatabaseService.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		513D5A89227C02AB00D70DE6 /* SelectCurrencyScreen */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 513D5A93227C02AB00D70DE6 /* Build configuration list for PBXNativeTarget "SelectCurrencyScreen" */;
@@ -696,11 +822,6 @@
 			);
 			dependencies = (
 				51A5287722799E4300700158 /* PBXTargetDependency */,
-				51CCABD62279DEFF0056C4D9 /* PBXTargetDependency */,
-				51CCABFE2279E1F50056C4D9 /* PBXTargetDependency */,
-				51E205A1227AD18700E0046C /* PBXTargetDependency */,
-				513D5A90227C02AB00D70DE6 /* PBXTargetDependency */,
-				513D5AB1227C0C1400D70DE6 /* PBXTargetDependency */,
 			);
 			name = MoolahRates;
 			productName = MoolahRates;
@@ -797,6 +918,7 @@
 				51F16915227A15C600DA8719 /* PBXTargetDependency */,
 				51F1691A227A163600DA8719 /* PBXTargetDependency */,
 				51E205A8227AD1A300E0046C /* PBXTargetDependency */,
+				5138E69B227C79C400577025 /* PBXTargetDependency */,
 			);
 			name = MoolahRatesTests;
 			productName = MoolahRatesTests;
@@ -813,6 +935,10 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Pavel Krasnobrovkin";
 				TargetAttributes = {
+					5138E664227C64DC00577025 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
 					513D5A89227C02AB00D70DE6 = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
@@ -860,6 +986,7 @@
 			projectRoot = "";
 			targets = (
 				51A5285622799D1F00700158 /* MoolahRates */,
+				5138E664227C64DC00577025 /* DatabaseService */,
 				51CCABF72279E1F50056C4D9 /* CurrencyCode */,
 				51E2059A227AD18600E0046C /* CurrencyRate */,
 				51CCABCF2279DEFF0056C4D9 /* StoryboardInstantiatable */,
@@ -872,6 +999,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5138E663227C64DC00577025 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		513D5A88227C02AB00D70DE6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -984,6 +1118,30 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5138E661227C64DC00577025 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5138E690227C701100577025 /* RatesOrder+CoreDataClass.swift in Sources */,
+				5138E688227C6F1900577025 /* Database.xcdatamodeld in Sources */,
+				5138E6A1227C804C00577025 /* CreateNewRate.swift in Sources */,
+				5138E678227C652E00577025 /* DatabaseService.swift in Sources */,
+				5138E69F227C7E5700577025 /* NSManagedObject+InitWithContext.swift in Sources */,
+				5138E699227C771500577025 /* CurrencyRate+InitFromEntity.swift in Sources */,
+				5138E695227C728800577025 /* Initialize.swift in Sources */,
+				5138E67A227C65D300577025 /* DatabaseObserver.swift in Sources */,
+				5138E67C227C668400577025 /* DatabaseImplementation.swift in Sources */,
+				5138E680227C6E9D00577025 /* FileManager+StoreURL.swift in Sources */,
+				5138E6A3227C808D00577025 /* UpdateRateWith.swift in Sources */,
+				5138E697227C754100577025 /* LatestRatesSorted.swift in Sources */,
+				5138E6A5227C80D100577025 /* DeleteRate.swift in Sources */,
+				5138E68E227C701100577025 /* Rate+CoreDataClass.swift in Sources */,
+				5138E68F227C701100577025 /* Rate+CoreDataProperties.swift in Sources */,
+				5138E691227C701100577025 /* RatesOrder+CoreDataProperties.swift in Sources */,
+				5138E693227C711D00577025 /* DatabaseError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		513D5A86227C02AB00D70DE6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1053,6 +1211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5138E69D227C79DC00577025 /* DatabaseTests.swift in Sources */,
 				51E205AF227AD50300E0046C /* CurrencyRateTests.swift in Sources */,
 				51F16912227A15C600DA8719 /* CurrencyCodeTests.swift in Sources */,
 			);
@@ -1061,10 +1220,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		513D5A90227C02AB00D70DE6 /* PBXTargetDependency */ = {
+		5138E672227C650E00577025 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 513D5A89227C02AB00D70DE6 /* SelectCurrencyScreen */;
-			targetProxy = 513D5A8F227C02AB00D70DE6 /* PBXContainerItemProxy */;
+			target = 51CCABF72279E1F50056C4D9 /* CurrencyCode */;
+			targetProxy = 5138E671227C650E00577025 /* PBXContainerItemProxy */;
+		};
+		5138E674227C650E00577025 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51E2059A227AD18600E0046C /* CurrencyRate */;
+			targetProxy = 5138E673227C650E00577025 /* PBXContainerItemProxy */;
+		};
+		5138E69B227C79C400577025 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5138E664227C64DC00577025 /* DatabaseService */;
+			targetProxy = 5138E69A227C79C400577025 /* PBXContainerItemProxy */;
 		};
 		513D5A9B227C02DA00D70DE6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1075,11 +1244,6 @@
 			isa = PBXTargetDependency;
 			target = 51CCABF72279E1F50056C4D9 /* CurrencyCode */;
 			targetProxy = 513D5AA4227C059300D70DE6 /* PBXContainerItemProxy */;
-		};
-		513D5AB1227C0C1400D70DE6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 513D5AAA227C0C1300D70DE6 /* CalculatorScreen */;
-			targetProxy = 513D5AB0227C0C1400D70DE6 /* PBXContainerItemProxy */;
 		};
 		513D5AB8227C0C3C00D70DE6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1101,30 +1265,15 @@
 			target = 51A5287022799E4300700158 /* HomeScreen */;
 			targetProxy = 51A5287622799E4300700158 /* PBXContainerItemProxy */;
 		};
-		51CCABD62279DEFF0056C4D9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 51CCABCF2279DEFF0056C4D9 /* StoryboardInstantiatable */;
-			targetProxy = 51CCABD52279DEFF0056C4D9 /* PBXContainerItemProxy */;
-		};
 		51CCABDD2279DF410056C4D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 51CCABCF2279DEFF0056C4D9 /* StoryboardInstantiatable */;
 			targetProxy = 51CCABDC2279DF410056C4D9 /* PBXContainerItemProxy */;
 		};
-		51CCABFE2279E1F50056C4D9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 51CCABF72279E1F50056C4D9 /* CurrencyCode */;
-			targetProxy = 51CCABFD2279E1F50056C4D9 /* PBXContainerItemProxy */;
-		};
 		51CCAC052279E20B0056C4D9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 51CCABF72279E1F50056C4D9 /* CurrencyCode */;
 			targetProxy = 51CCAC042279E20B0056C4D9 /* PBXContainerItemProxy */;
-		};
-		51E205A1227AD18700E0046C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 51E2059A227AD18600E0046C /* CurrencyRate */;
-			targetProxy = 51E205A0227AD18700E0046C /* PBXContainerItemProxy */;
 		};
 		51E205A8227AD1A300E0046C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1149,6 +1298,67 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		5138E66E227C64DD00577025 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Services/DatabaseService/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.krasnobrovkin.pavel.DatabaseService;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5138E66F227C64DD00577025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Services/DatabaseService/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.krasnobrovkin.pavel.DatabaseService;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		513D5A94227C02AB00D70DE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1726,6 +1936,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5138E670227C64DD00577025 /* Build configuration list for PBXNativeTarget "DatabaseService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5138E66E227C64DD00577025 /* Debug */,
+				5138E66F227C64DD00577025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		513D5A93227C02AB00D70DE6 /* Build configuration list for PBXNativeTarget "SelectCurrencyScreen" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1808,6 +2027,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5138E683227C6F1800577025 /* Database.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5138E684227C6F1800577025 /* Database.xcdatamodel */,
+			);
+			currentVersion = 5138E684227C6F1800577025 /* Database.xcdatamodel */;
+			path = Database.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 51A5284F22799D1F00700158 /* Project object */;
 }

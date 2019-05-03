@@ -8,7 +8,7 @@
 
 import CurrencyCode
 
-public struct CurrencyRate {
+public struct CurrencyRate: Hashable {
     
     public init?(_ first: CurrencyCode, second: CurrencyCode, rate: Decimal) {
         guard first != second else {
