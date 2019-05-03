@@ -37,6 +37,7 @@ extension DatabaseImplementation {
                 return
             }
             
+            self.observers.forEach { $0.database(self, didDeleteRate: rate) }
             completion(.success(rate))
         }
     }
