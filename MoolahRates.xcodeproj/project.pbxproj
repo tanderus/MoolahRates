@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		513D5A82227BFCDC00D70DE6 /* AddCurrencyPairCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513D5A81227BFCDC00D70DE6 /* AddCurrencyPairCell.swift */; };
+		513D5A84227BFE9E00D70DE6 /* ExchangeRateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513D5A83227BFE9E00D70DE6 /* ExchangeRateCell.swift */; };
 		51A5285B22799D1F00700158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A5285A22799D1F00700158 /* AppDelegate.swift */; };
 		51A5286222799D2100700158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A5286122799D2100700158 /* Assets.xcassets */; };
 		51A5287522799E4300700158 /* HomeScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 51A5287322799E4300700158 /* HomeScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -128,6 +130,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		513D5A81227BFCDC00D70DE6 /* AddCurrencyPairCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCurrencyPairCell.swift; sourceTree = "<group>"; };
+		513D5A83227BFE9E00D70DE6 /* ExchangeRateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateCell.swift; sourceTree = "<group>"; };
 		514454B1227A03F800F69A70 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		514454B3227A040200F69A70 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		51A5285722799D1F00700158 /* MoolahRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoolahRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -291,6 +295,8 @@
 			isa = PBXGroup;
 			children = (
 				51A5289A2279A07000700158 /* HomeViewController.swift */,
+				513D5A81227BFCDC00D70DE6 /* AddCurrencyPairCell.swift */,
+				513D5A83227BFE9E00D70DE6 /* ExchangeRateCell.swift */,
 				51A5289E2279A17000700158 /* Assets.xcassets */,
 				51A528A02279A17A00700158 /* Main.storyboard */,
 			);
@@ -731,8 +737,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				513D5A84227BFE9E00D70DE6 /* ExchangeRateCell.swift in Sources */,
 				51A5289922799F0100700158 /* Coordinator.swift in Sources */,
 				51A5289B2279A07000700158 /* HomeViewController.swift in Sources */,
+				513D5A82227BFCDC00D70DE6 /* AddCurrencyPairCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

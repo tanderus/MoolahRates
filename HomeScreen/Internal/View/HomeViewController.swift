@@ -11,4 +11,5 @@ import StoryboardInstantiatable
 
 internal final class HomeViewController: UIViewController, StoryboardInstantiatable {
     
+    @IBOutlet internal weak var tableView: UITableView!
 }
