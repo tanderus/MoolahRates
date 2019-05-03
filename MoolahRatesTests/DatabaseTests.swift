@@ -140,5 +140,62 @@ class DatabaseTests: XCTestCase {
         wait(for: [expect], timeout: 10)
     }
     
+    func testSetNewRate() {
+        let USD = CurrencyCode.USD
+        let RUB = CurrencyCode.RUB
+        let ratio = Decimal(string: "67.56")!
+        
+        guard let initialRate = CurrencyRate(USD, second: RUB, rate: ratio) else {
+            XCTFail("Should create CurrencyRate normally")
+            return
+        }
+        
+        let expect = expectation(description: "Should delete rate normally")
+        self.database.createNewRate(initialRate) { createResult in
+            switch createResult {
+            case let .failure(error):
+                if error == .RateAlreadyExists {
+                    fallthrough
+                }
+            case .success:
+                let newRatio = Decimal(string: "32.60")!
+                guard let newRate = CurrencyRate(initialRate.first, second: initialRate.second, rate: newRatio) else {
+                    return
+                }
+                
+                self.database.updateRateWith(newRate) { updateResult in
+                    switch updateResult {
+                    case .failure:
+                        break
+                    case let .success(receivedRate):
+                        XCTAssert(receivedRate == newRate, "Should receive the same new rate")
+                        
+                        DispatchQueue.main.async {
+                            let request: NSFetchRequest<Rate> = Rate.fetchRequest()
+                            request.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: true)]
+                            
+                            let firstCode = NSPredicate(format: "firstCode == '\(newRate.first)'")
+                            let secondCode = NSPredicate(format: "secondCode == '\(newRate.second)'")
+                            let ratio = NSPredicate(format: "ratio == \(newRate.rate)")
+                            
+                            request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [firstCode, secondCode, ratio])
+                            
+                            let context = self.database.persistentContainer.viewContext
+                            do {
+                                let objects = try context.fetch(request)
+                                if !objects.isEmpty {
+                                    expect.fulfill()
+                                }
+                            }
+                            catch {}
+                        }
+                    }
+                }
+            }
+        }
+        
+        wait(for: [expect], timeout: 10)
+    }
+    
     private let database = DatabaseImplementation()
 }
