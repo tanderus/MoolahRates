@@ -44,6 +44,16 @@
 		513D5AC0227C0C5A00D70DE6 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513D5ABF227C0C5A00D70DE6 /* Coordinator.swift */; };
 		513D5AC2227C0CAB00D70DE6 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513D5AC1227C0CAB00D70DE6 /* CalculatorViewController.swift */; };
 		513D5AC4227C0F8B00D70DE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 513D5AC3227C0F8B00D70DE6 /* Main.storyboard */; };
+		519F8220227D496D00F3D586 /* BackendService.h in Headers */ = {isa = PBXBuildFile; fileRef = 519F821E227D496D00F3D586 /* BackendService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		519F8223227D496D00F3D586 /* BackendService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519F821C227D496C00F3D586 /* BackendService.framework */; };
+		519F8224227D496D00F3D586 /* BackendService.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 519F821C227D496C00F3D586 /* BackendService.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		519F822F227D49B000F3D586 /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F822E227D49B000F3D586 /* BackendService.swift */; };
+		519F8231227D49D400F3D586 /* BackendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F8230227D49D400F3D586 /* BackendError.swift */; };
+		519F8233227D4B0100F3D586 /* BackendImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F8232227D4B0100F3D586 /* BackendImplementation.swift */; };
+		519F8235227D4BAF00F3D586 /* BackendEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F8234227D4BAF00F3D586 /* BackendEndpoint.swift */; };
+		519F8238227D574000F3D586 /* RatesIoDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F8237227D574000F3D586 /* RatesIoDecoder.swift */; };
+		519F823C227D582500F3D586 /* RatesIoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F823B227D582500F3D586 /* RatesIoResponse.swift */; };
+		519F8240227D6E0E00F3D586 /* BackendTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F823F227D6E0E00F3D586 /* BackendTests.swift */; };
 		51A5285B22799D1F00700158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A5285A22799D1F00700158 /* AppDelegate.swift */; };
 		51A5286222799D2100700158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A5286122799D2100700158 /* Assets.xcassets */; };
 		51A5287522799E4300700158 /* HomeScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 51A5287322799E4300700158 /* HomeScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -131,6 +141,34 @@
 			remoteGlobalIDString = 51CCABCF2279DEFF0056C4D9;
 			remoteInfo = StoryboardInstantiatable;
 		};
+		519F8221227D496D00F3D586 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 519F821B227D496C00F3D586;
+			remoteInfo = BackendService;
+		};
+		519F8228227D498D00F3D586 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51CCABF72279E1F50056C4D9;
+			remoteInfo = CurrencyCode;
+		};
+		519F822A227D498D00F3D586 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 51E2059A227AD18600E0046C;
+			remoteInfo = CurrencyRate;
+		};
+		519F823D227D6DF000F3D586 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 519F821B227D496C00F3D586;
+			remoteInfo = BackendService;
+		};
 		51A5287622799E4300700158 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
@@ -194,6 +232,7 @@
 				51E205A3227AD18700E0046C /* CurrencyRate.framework in Embed Frameworks */,
 				5138E66D227C64DD00577025 /* DatabaseService.framework in Embed Frameworks */,
 				51A5287922799E4300700158 /* HomeScreen.framework in Embed Frameworks */,
+				519F8224227D496D00F3D586 /* BackendService.framework in Embed Frameworks */,
 				513D5AB3227C0C1400D70DE6 /* CalculatorScreen.framework in Embed Frameworks */,
 				51CCAC002279E1F50056C4D9 /* CurrencyCode.framework in Embed Frameworks */,
 			);
@@ -242,6 +281,16 @@
 		513D5AC3227C0F8B00D70DE6 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		514454B1227A03F800F69A70 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		514454B3227A040200F69A70 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		519F821C227D496C00F3D586 /* BackendService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BackendService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		519F821E227D496D00F3D586 /* BackendService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackendService.h; sourceTree = "<group>"; };
+		519F821F227D496D00F3D586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		519F822E227D49B000F3D586 /* BackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendService.swift; sourceTree = "<group>"; };
+		519F8230227D49D400F3D586 /* BackendError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendError.swift; sourceTree = "<group>"; };
+		519F8232227D4B0100F3D586 /* BackendImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendImplementation.swift; sourceTree = "<group>"; };
+		519F8234227D4BAF00F3D586 /* BackendEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendEndpoint.swift; sourceTree = "<group>"; };
+		519F8237227D574000F3D586 /* RatesIoDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesIoDecoder.swift; sourceTree = "<group>"; };
+		519F823B227D582500F3D586 /* RatesIoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesIoResponse.swift; sourceTree = "<group>"; };
+		519F823F227D6E0E00F3D586 /* BackendTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendTests.swift; sourceTree = "<group>"; };
 		51A5285722799D1F00700158 /* MoolahRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoolahRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A5285A22799D1F00700158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51A5286122799D2100700158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -302,12 +351,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		519F8219227D496C00F3D586 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51A5285422799D1F00700158 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				51CCABFF2279E1F50056C4D9 /* CurrencyCode.framework in Frameworks */,
 				513D5AB2227C0C1400D70DE6 /* CalculatorScreen.framework in Frameworks */,
+				519F8223227D496D00F3D586 /* BackendService.framework in Frameworks */,
 				51CCABD72279DEFF0056C4D9 /* StoryboardInstantiatable.framework in Frameworks */,
 				5138E66C227C64DD00577025 /* DatabaseService.framework in Frameworks */,
 				51A5287822799E4300700158 /* HomeScreen.framework in Frameworks */,
@@ -486,11 +543,67 @@
 			isa = PBXGroup;
 			children = (
 				5138E666227C64DD00577025 /* DatabaseService */,
+				519F821D227D496D00F3D586 /* BackendService */,
 				51CCABF92279E1F50056C4D9 /* CurrencyCode */,
 				51E2059C227AD18700E0046C /* CurrencyRate */,
 				51CCABD12279DEFF0056C4D9 /* StoryboardInstantiatable */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		519F821D227D496D00F3D586 /* BackendService */ = {
+			isa = PBXGroup;
+			children = (
+				519F821E227D496D00F3D586 /* BackendService.h */,
+				519F822C227D499100F3D586 /* Public */,
+				519F822D227D499500F3D586 /* Internal */,
+				519F821F227D496D00F3D586 /* Info.plist */,
+			);
+			path = BackendService;
+			sourceTree = "<group>";
+		};
+		519F822C227D499100F3D586 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				519F822E227D49B000F3D586 /* BackendService.swift */,
+				519F8230227D49D400F3D586 /* BackendError.swift */,
+				519F8234227D4BAF00F3D586 /* BackendEndpoint.swift */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		519F822D227D499500F3D586 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				519F8236227D4BE000F3D586 /* Service */,
+			);
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		519F8236227D4BE000F3D586 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				519F8232227D4B0100F3D586 /* BackendImplementation.swift */,
+				519F8239227D57C000F3D586 /* JSON Decoding */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		519F8239227D57C000F3D586 /* JSON Decoding */ = {
+			isa = PBXGroup;
+			children = (
+				519F823A227D57EB00F3D586 /* RatesIO */,
+			);
+			path = "JSON Decoding";
+			sourceTree = "<group>";
+		};
+		519F823A227D57EB00F3D586 /* RatesIO */ = {
+			isa = PBXGroup;
+			children = (
+				519F8237227D574000F3D586 /* RatesIoDecoder.swift */,
+				519F823B227D582500F3D586 /* RatesIoResponse.swift */,
+			);
+			path = RatesIO;
 			sourceTree = "<group>";
 		};
 		51A5284E22799D1F00700158 = {
@@ -518,6 +631,7 @@
 				513D5A8A227C02AB00D70DE6 /* SelectCurrencyScreen.framework */,
 				513D5AAB227C0C1300D70DE6 /* CalculatorScreen.framework */,
 				5138E665227C64DC00577025 /* DatabaseService.framework */,
+				519F821C227D496C00F3D586 /* BackendService.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -658,6 +772,7 @@
 				51F16911227A15C600DA8719 /* CurrencyCodeTests.swift */,
 				51E205AE227AD50300E0046C /* CurrencyRateTests.swift */,
 				5138E69C227C79DC00577025 /* DatabaseTests.swift */,
+				519F823F227D6E0E00F3D586 /* BackendTests.swift */,
 				51F16913227A15C600DA8719 /* Info.plist */,
 			);
 			path = MoolahRatesTests;
@@ -709,6 +824,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				513D5AAF227C0C1400D70DE6 /* CalculatorScreen.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		519F8217227D496C00F3D586 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				519F8220227D496D00F3D586 /* BackendService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,6 +931,26 @@
 			productReference = 513D5AAB227C0C1300D70DE6 /* CalculatorScreen.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		519F821B227D496C00F3D586 /* BackendService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 519F8227227D496D00F3D586 /* Build configuration list for PBXNativeTarget "BackendService" */;
+			buildPhases = (
+				519F8217227D496C00F3D586 /* Headers */,
+				519F8218227D496C00F3D586 /* Sources */,
+				519F8219227D496C00F3D586 /* Frameworks */,
+				519F821A227D496C00F3D586 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				519F8229227D498D00F3D586 /* PBXTargetDependency */,
+				519F822B227D498D00F3D586 /* PBXTargetDependency */,
+			);
+			name = BackendService;
+			productName = BackendService;
+			productReference = 519F821C227D496C00F3D586 /* BackendService.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		51A5285622799D1F00700158 /* MoolahRates */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 51A5286922799D2100700158 /* Build configuration list for PBXNativeTarget "MoolahRates" */;
@@ -822,6 +965,7 @@
 			);
 			dependencies = (
 				51A5287722799E4300700158 /* PBXTargetDependency */,
+				519F8222227D496D00F3D586 /* PBXTargetDependency */,
 			);
 			name = MoolahRates;
 			productName = MoolahRates;
@@ -919,6 +1063,7 @@
 				51F1691A227A163600DA8719 /* PBXTargetDependency */,
 				51E205A8227AD1A300E0046C /* PBXTargetDependency */,
 				5138E69B227C79C400577025 /* PBXTargetDependency */,
+				519F823E227D6DF000F3D586 /* PBXTargetDependency */,
 			);
 			name = MoolahRatesTests;
 			productName = MoolahRatesTests;
@@ -944,6 +1089,10 @@
 						LastSwiftMigration = 1020;
 					};
 					513D5AAA227C0C1300D70DE6 = {
+						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
+					};
+					519F821B227D496C00F3D586 = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
 					};
@@ -987,6 +1136,7 @@
 			targets = (
 				51A5285622799D1F00700158 /* MoolahRates */,
 				5138E664227C64DC00577025 /* DatabaseService */,
+				519F821B227D496C00F3D586 /* BackendService */,
 				51CCABF72279E1F50056C4D9 /* CurrencyCode */,
 				51E2059A227AD18600E0046C /* CurrencyRate */,
 				51CCABCF2279DEFF0056C4D9 /* StoryboardInstantiatable */,
@@ -1020,6 +1170,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				513D5AC4227C0F8B00D70DE6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		519F821A227D496C00F3D586 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1161,6 +1318,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		519F8218227D496C00F3D586 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				519F8233227D4B0100F3D586 /* BackendImplementation.swift in Sources */,
+				519F8235227D4BAF00F3D586 /* BackendEndpoint.swift in Sources */,
+				519F822F227D49B000F3D586 /* BackendService.swift in Sources */,
+				519F8231227D49D400F3D586 /* BackendError.swift in Sources */,
+				519F823C227D582500F3D586 /* RatesIoResponse.swift in Sources */,
+				519F8238227D574000F3D586 /* RatesIoDecoder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		51A5285322799D1F00700158 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1211,6 +1381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				519F8240227D6E0E00F3D586 /* BackendTests.swift in Sources */,
 				5138E69D227C79DC00577025 /* DatabaseTests.swift in Sources */,
 				51E205AF227AD50300E0046C /* CurrencyRateTests.swift in Sources */,
 				51F16912227A15C600DA8719 /* CurrencyCodeTests.swift in Sources */,
@@ -1259,6 +1430,26 @@
 			isa = PBXTargetDependency;
 			target = 51CCABCF2279DEFF0056C4D9 /* StoryboardInstantiatable */;
 			targetProxy = 513D5ABB227C0C3C00D70DE6 /* PBXContainerItemProxy */;
+		};
+		519F8222227D496D00F3D586 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 519F821B227D496C00F3D586 /* BackendService */;
+			targetProxy = 519F8221227D496D00F3D586 /* PBXContainerItemProxy */;
+		};
+		519F8229227D498D00F3D586 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51CCABF72279E1F50056C4D9 /* CurrencyCode */;
+			targetProxy = 519F8228227D498D00F3D586 /* PBXContainerItemProxy */;
+		};
+		519F822B227D498D00F3D586 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 51E2059A227AD18600E0046C /* CurrencyRate */;
+			targetProxy = 519F822A227D498D00F3D586 /* PBXContainerItemProxy */;
+		};
+		519F823E227D6DF000F3D586 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 519F821B227D496C00F3D586 /* BackendService */;
+			targetProxy = 519F823D227D6DF000F3D586 /* PBXContainerItemProxy */;
 		};
 		51A5287722799E4300700158 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1471,6 +1662,67 @@
 					"@loader_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.krasnobrovkin.pavel.CalculatorScreen;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		519F8225227D496D00F3D586 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Services/BackendService/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.krasnobrovkin.pavel.BackendService;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		519F8226227D496D00F3D586 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = "";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Services/BackendService/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.krasnobrovkin.pavel.BackendService;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -1959,6 +2211,15 @@
 			buildConfigurations = (
 				513D5AB5227C0C1400D70DE6 /* Debug */,
 				513D5AB6227C0C1400D70DE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		519F8227227D496D00F3D586 /* Build configuration list for PBXNativeTarget "BackendService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				519F8225227D496D00F3D586 /* Debug */,
+				519F8226227D496D00F3D586 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
