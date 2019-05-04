@@ -9,6 +9,7 @@
 import XCTest
 
 import CurrencyCode
+import CurrencyRate
 @testable import SelectCurrencyPairFlow
 
 class SelectCurrencyPairTests: XCTestCase {
@@ -27,5 +28,15 @@ class SelectCurrencyPairTests: XCTestCase {
         let allPairs = allValidCurrencyPairs
         let flag = SelectCurrencyPairFlow.Coordinator.isPossibleToStart(alreadyUsedPairs: allPairs)
         XCTAssertFalse(flag, "Shouldn't be possible to run flow if all possible rates are already created")
+    }
+    
+    func testIfPossibleToStartWithOnlyOnePair() {
+        guard let pair = RateCurrencyPair(first: .EUR, second: .USD) else {
+            XCTFail("Should initialize normally")
+            return
+        }
+        
+        let flag = SelectCurrencyPairFlow.Coordinator.isPossibleToStart(alreadyUsedPairs: [pair])
+        XCTAssertTrue(flag, "Should be possible to start")
     }
 }

@@ -15,9 +15,9 @@ import UIKit
 public final class Coordinator {
     
     public class func isPossibleToStart(alreadyUsedPairs: Set<RateCurrencyPair>) -> Bool {
-        let allPossible = allValidCurrencyPairs
-        let remaining = allPossible.subtracting(alreadyUsedPairs)
-        return remaining.count > 0
+        let allCurrencies = CurrencyCode.allCases
+        let disabled = self.leftDisabledCurrencyForPairs(alreadyUsedPairs)
+        return disabled.count < allCurrencies.count
     }
     
     public init?(_ baseViewController: UIViewController, alreadyUsedPairs pairs: Set<RateCurrencyPair>) {
