@@ -11,5 +11,12 @@ import StoryboardInstantiatable
 
 internal final class HomeViewController: UIViewController, StoryboardInstantiatable {
     
+    var afterViewDidLoad: (() -> Void)!
+    
     @IBOutlet internal weak var tableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.afterViewDidLoad()
+    }
 }

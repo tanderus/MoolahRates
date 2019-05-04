@@ -3,6 +3,8 @@ use_frameworks!
 
 target 'HomeScreen' do
 
+pod 'MBProgressHUD'
+
 end
 
 target 'MoolahRates' do

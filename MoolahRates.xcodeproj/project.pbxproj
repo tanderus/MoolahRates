@@ -61,6 +61,9 @@
 		519F8291227D85BE00F3D586 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F8290227D85BE00F3D586 /* Presenter.swift */; };
 		519F8294227D997900F3D586 /* SelectCurrencyPairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F8293227D997900F3D586 /* SelectCurrencyPairTests.swift */; };
 		519F8298227D9BD700F3D586 /* RateCurrencyPair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F8297227D9BD700F3D586 /* RateCurrencyPair.swift */; };
+		519F829C227DB40C00F3D586 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F829B227DB40C00F3D586 /* Presenter.swift */; };
+		519F829E227DB4AD00F3D586 /* PresenterImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F829D227DB4AD00F3D586 /* PresenterImplementation.swift */; };
+		519F82A3227DBB2800F3D586 /* RatesUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F82A2227DBB2800F3D586 /* RatesUpdater.swift */; };
 		51A5285B22799D1F00700158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A5285A22799D1F00700158 /* AppDelegate.swift */; };
 		51A5286222799D2100700158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A5286122799D2100700158 /* Assets.xcassets */; };
 		51A5287522799E4300700158 /* HomeScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 51A5287322799E4300700158 /* HomeScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -347,6 +350,9 @@
 		519F8290227D85BE00F3D586 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		519F8293227D997900F3D586 /* SelectCurrencyPairTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyPairTests.swift; sourceTree = "<group>"; };
 		519F8297227D9BD700F3D586 /* RateCurrencyPair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCurrencyPair.swift; sourceTree = "<group>"; };
+		519F829B227DB40C00F3D586 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		519F829D227DB4AD00F3D586 /* PresenterImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterImplementation.swift; sourceTree = "<group>"; };
+		519F82A2227DBB2800F3D586 /* RatesUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesUpdater.swift; sourceTree = "<group>"; };
 		51A5285722799D1F00700158 /* MoolahRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoolahRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A5285A22799D1F00700158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51A5286122799D2100700158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -746,6 +752,14 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		519F829F227DBADE00F3D586 /* RatesUpdater */ = {
+			isa = PBXGroup;
+			children = (
+				519F82A2227DBB2800F3D586 /* RatesUpdater.swift */,
+			);
+			path = RatesUpdater;
+			sourceTree = "<group>";
+		};
 		51A5284E22799D1F00700158 = {
 			isa = PBXGroup;
 			children = (
@@ -808,9 +822,9 @@
 		51A5287F22799E6100700158 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
+				519F829F227DBADE00F3D586 /* RatesUpdater */,
+				51A5288122799E7500700158 /* Presenter */,
 				51A5288022799E7000700158 /* View */,
-				51A5288122799E7500700158 /* Interactor */,
-				51A5288222799E7900700158 /* Presenter */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -827,16 +841,11 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		51A5288122799E7500700158 /* Interactor */ = {
+		51A5288122799E7500700158 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		51A5288222799E7900700158 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
+				519F829B227DB40C00F3D586 /* Presenter.swift */,
+				519F829D227DB4AD00F3D586 /* PresenterImplementation.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1130,6 +1139,7 @@
 				51A5285422799D1F00700158 /* Frameworks */,
 				51A5285522799D1F00700158 /* Resources */,
 				51A5287D22799E4300700158 /* Embed Frameworks */,
+				63B850613DC4913CFE3F9AD0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1435,6 +1445,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		63B850613DC4913CFE3F9AD0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoolahRates/Pods-MoolahRates-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoolahRates/Pods-MoolahRates-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B6FDD6906C762DD66759FDC5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1539,8 +1571,11 @@
 			files = (
 				513D5A84227BFE9E00D70DE6 /* ExchangeRateCell.swift in Sources */,
 				51A5289922799F0100700158 /* Coordinator.swift in Sources */,
+				519F82A3227DBB2800F3D586 /* RatesUpdater.swift in Sources */,
+				519F829E227DB4AD00F3D586 /* PresenterImplementation.swift in Sources */,
 				51A5289B2279A07000700158 /* HomeViewController.swift in Sources */,
 				513D5A82227BFCDC00D70DE6 /* AddCurrencyPairCell.swift in Sources */,
+				519F829C227DB40C00F3D586 /* Presenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
