@@ -529,14 +529,15 @@
 			path = Internal;
 			sourceTree = "<group>";
 		};
-		513D5AC5227C16C700D70DE6 /* Screens */ = {
+		513D5AC5227C16C700D70DE6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				51CCABD12279DEFF0056C4D9 /* StoryboardInstantiatable */,
 				51A5287222799E4300700158 /* HomeScreen */,
 				513D5A8B227C02AB00D70DE6 /* SelectCurrencyScreen */,
 				513D5AAC227C0C1400D70DE6 /* CalculatorScreen */,
 			);
-			path = Screens;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		513D5AC6227C16CD00D70DE6 /* Services */ = {
@@ -544,9 +545,6 @@
 			children = (
 				5138E666227C64DD00577025 /* DatabaseService */,
 				519F821D227D496D00F3D586 /* BackendService */,
-				51CCABF92279E1F50056C4D9 /* CurrencyCode */,
-				51E2059C227AD18700E0046C /* CurrencyRate */,
-				51CCABD12279DEFF0056C4D9 /* StoryboardInstantiatable */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -606,12 +604,29 @@
 			path = RatesIO;
 			sourceTree = "<group>";
 		};
+		519F8241227D776300F3D586 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				513D5AC6227C16CD00D70DE6 /* Services */,
+				519F8242227D77B100F3D586 /* Model */,
+				513D5AC5227C16C700D70DE6 /* UI */,
+			);
+			path = Layers;
+			sourceTree = "<group>";
+		};
+		519F8242227D77B100F3D586 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				51CCABF92279E1F50056C4D9 /* CurrencyCode */,
+				51E2059C227AD18700E0046C /* CurrencyRate */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		51A5284E22799D1F00700158 = {
 			isa = PBXGroup;
 			children = (
 				51A5285922799D1F00700158 /* MoolahRates */,
-				513D5AC6227C16CD00D70DE6 /* Services */,
-				513D5AC5227C16C700D70DE6 /* Screens */,
 				51F16910227A15C600DA8719 /* MoolahRatesTests */,
 				51A5285822799D1F00700158 /* Products */,
 				E5822EFB70295355D8EE6BDA /* Frameworks */,
@@ -640,6 +655,7 @@
 			isa = PBXGroup;
 			children = (
 				51A5285A22799D1F00700158 /* AppDelegate.swift */,
+				519F8241227D776300F3D586 /* Layers */,
 				51A5286122799D2100700158 /* Assets.xcassets */,
 				51A5286622799D2100700158 /* Info.plist */,
 			);
@@ -1501,7 +1517,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Services/DatabaseService/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/Services/DatabaseService/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1532,7 +1548,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Services/DatabaseService/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/Services/DatabaseService/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1562,7 +1578,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Screens/SelectCurrencyScreen/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/SelectCurrencyScreen/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1593,7 +1609,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Screens/SelectCurrencyScreen/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/SelectCurrencyScreen/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1623,7 +1639,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Screens/CalculatorScreen/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/CalculatorScreen/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1654,7 +1670,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Screens/CalculatorScreen/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/CalculatorScreen/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1684,7 +1700,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Services/BackendService/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/Services/BackendService/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1715,7 +1731,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Services/BackendService/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/Services/BackendService/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1907,7 +1923,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Screens/HomeScreen/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/HomeScreen/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1939,7 +1955,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Screens/HomeScreen/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/HomeScreen/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1969,7 +1985,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Services/StoryboardInstantiatable/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/StoryboardInstantiatable/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2000,7 +2016,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Services/StoryboardInstantiatable/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/StoryboardInstantiatable/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2030,7 +2046,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Services/CurrencyCode/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/Model/CurrencyCode/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2061,7 +2077,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Services/CurrencyCode/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/Model/CurrencyCode/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2091,7 +2107,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Services/CurrencyRate/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/Model/CurrencyRate/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2122,7 +2138,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Services/CurrencyRate/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/Model/CurrencyRate/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
