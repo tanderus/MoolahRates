@@ -21,7 +21,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRe-nq-L1F" userLabel="Content View">
                                 <rect key="frame" x="20" y="175" width="280" height="218"/>
                                 <subviews>
-                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="hbc-DJ-kRi">
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10000" stepValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hbc-DJ-kRi">
                                         <rect key="frame" x="170" y="11.5" width="94" height="29"/>
                                         <connections>
                                             <action selector="didChangeValueBaseCurrencyStepper" destination="CM9-5z-tR2" eventType="valueChanged" id="wwj-YX-O7V"/>

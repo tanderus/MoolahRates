@@ -16,6 +16,8 @@ import BackendService
 import SelectCurrencyPairFlow
 import MBProgressHUD
 
+import CalculatorScreen
+
 public final class Coordinator {
     
     public init(_ navigationController: UINavigationController) {
@@ -101,8 +103,11 @@ public final class Coordinator {
     }
     
     private func didSelectRate(_ rate: CurrencyRate) {
-        // TODO: Show calculator screen
-        print("Selected rate: \(rate.currencyPair)")
+        self.calculatorCoordinator = CalculatorScreen.Coordinator(self.navigationController, rate: rate, database: self.database)
+        self.calculatorCoordinator.didTapDone = { [weak self] in
+            self?.navigationController.dismiss(animated: true, completion: nil)
+        }
+        self.calculatorCoordinator.start()
     }
     
     private func didRequestToDeleteRate(_ rate: CurrencyRate) {
@@ -161,4 +166,5 @@ public final class Coordinator {
     internal let backend = CreateNewBackendInstance()
     
     private var newRateCoordinator: SelectCurrencyPairFlow.Coordinator!
+    private var calculatorCoordinator: CalculatorScreen.Coordinator!
 }
