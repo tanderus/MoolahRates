@@ -1,16 +1,18 @@
 //
-//  CurrencyPair.swift
-//  CurrencyCode
+//  RateCurrencyPair.swift
+//  CurrencyRate
 //
-//  Created by Pavel Krasnobrovkin on 01/05/2019.
+//  Created by Pavel Krasnobrovkin on 04/05/2019.
 //  Copyright © 2019 Pavel Krasnobrovkin. All rights reserved.
 //
 
-import Foundation
+import CurrencyCode
 
-public struct CurrencyPair: Hashable {
+public struct RateCurrencyPair: Hashable {
     
-    public init(first: CurrencyCode, second: CurrencyCode) {
+    public init?(first: CurrencyCode, second: CurrencyCode) {
+        guard first != second else { return nil }
+        
         self.first = first
         self.second = second
     }

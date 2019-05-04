@@ -17,19 +17,12 @@ final class BackendImplementation: BackendService {
     
     
     func downloadLatestRatesForPairs(
-        currencyPairs: Set<CurrencyPair>
+        currencyPairs: Set<RateCurrencyPair>
         , endpoint: BackendEndpoint
         , completion: @escaping (Result<Set<CurrencyRate>, BackendError>) -> Void
         ) {
         
         if currencyPairs.isEmpty {
-            DispatchQueue.main.async {
-                completion(.failure(.WrongArguments))
-            }
-            return
-        }
-        
-        if nil != currencyPairs.first(where: { $0.first == $0.second }) {
             DispatchQueue.main.async {
                 completion(.failure(.WrongArguments))
             }

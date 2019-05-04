@@ -31,27 +31,11 @@ class BackendTests: XCTestCase {
         wait(for: [expect], timeout: 10)
     }
     
-    func testPassingPairsWithSameCurrencies() {
-        let wrongPairForRate = CurrencyPair(first: .RUB, second: .RUB)
-        let validPair = CurrencyPair(first: .USD, second: .RUB)
-        
-        let expect = expectation(description: "Should receive wrong arguments error")
-        self.backend.downloadLatestRatesForPairs(currencyPairs: [validPair, wrongPairForRate], endpoint: .RATES_IO) { result in
-            switch result {
-            case let .failure(error):
-                if error == .WrongArguments {
-                    expect.fulfill()
-                }
-            case .success:
-                break
-            }
-        }
-        
-        wait(for: [expect], timeout: 10)
-    }
-    
     func testPassingOneValidPair() {
-        let pair = CurrencyPair(first: .USD, second: .RUB)
+        guard let pair = RateCurrencyPair(first: .USD, second: .RUB) else {
+            XCTFail("Should initialize normally")
+            return
+        }
         
         let expect = expectation(description: "Should receive rate normally")
         self.backend.downloadLatestRatesForPairs(currencyPairs: [pair], endpoint: .RATES_IO) { result in
@@ -73,12 +57,13 @@ class BackendTests: XCTestCase {
     }
     
     func testPassingSeveralValidPairs() {
-        let pairsRequired = Set([
-            CurrencyPair(first: .USD, second: .RUB)
-            , CurrencyPair(first: .USD, second: .EUR)
-            , CurrencyPair(first: .RUB, second: .EUR)
-            , CurrencyPair(first: .EUR, second: .USD)
-            , CurrencyPair(first: .EUR, second: .RUB)
+        let pairsRequired = Set(
+            [
+                RateCurrencyPair(first: .USD, second: .RUB)!
+                , RateCurrencyPair(first: .USD, second: .EUR)!
+                , RateCurrencyPair(first: .RUB, second: .EUR)!
+                , RateCurrencyPair(first: .EUR, second: .USD)!
+                , RateCurrencyPair(first: .EUR, second: .RUB)!
             ]
         )
         
@@ -94,10 +79,9 @@ class BackendTests: XCTestCase {
                 print("Received rates: \(pairsRequired.count)")
                 rates.forEach { print("\($0.first) / \($0.second) IS '\($0.rate)'") }
                 
-                for receivedRate in rates {
-                    let pair = CurrencyPair(first: receivedRate.first, second: receivedRate.second)
-                    if !pairsRequired.contains(pair) {
-                        XCTFail("Didn't receive rate for \(pair.first) / \(pair.second)")
+                rates.forEach {
+                    if !pairsRequired.contains($0.currencyPair) {
+                        XCTFail("Received non-required rate: '\($0.first)' / '\($0.second)'")
                         return
                     }
                 }

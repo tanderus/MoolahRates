@@ -7,19 +7,20 @@
 //
 
 import CurrencyCode
+import CurrencyRate
 import SelectCurrencyScreen
 
 import UIKit
 
 public final class Coordinator {
     
-    public class func isPossibleToStart(alreadyUsedPairs: Set<CurrencyPair>) -> Bool {
-        let allPossible = allPossibleCurrencyPairs
+    public class func isPossibleToStart(alreadyUsedPairs: Set<RateCurrencyPair>) -> Bool {
+        let allPossible = allValidCurrencyPairs
         let remaining = allPossible.subtracting(alreadyUsedPairs)
         return remaining.count > 0
     }
     
-    public init?(_ baseViewController: UIViewController, alreadyUsedPairs pairs: Set<CurrencyPair>) {
+    public init?(_ baseViewController: UIViewController, alreadyUsedPairs pairs: Set<RateCurrencyPair>) {
         guard Coordinator.isPossibleToStart(alreadyUsedPairs: pairs) else {
             return nil
         }
@@ -43,8 +44,8 @@ public final class Coordinator {
         self.baseViewController.present(self.navigationController, animated: true, completion: nil)
     }
     
-    private class func leftDisabledCurrencyForPairs(_ pairs: Set<CurrencyPair>) -> Set<CurrencyCode> {
-        let remainingPairs = allPossibleCurrencyPairs.subtracting(pairs)
+    private class func leftDisabledCurrencyForPairs(_ pairs: Set<RateCurrencyPair>) -> Set<CurrencyCode> {
+        let remainingPairs = allValidCurrencyPairs.subtracting(pairs)
         let remainingCurrency = remainingPairs.map { $0.first }
         return Set(CurrencyCode.allCases).subtracting(remainingCurrency)
     }
@@ -57,18 +58,14 @@ public final class Coordinator {
 }
 
 
-internal let allPossibleCurrencyPairs: Set<CurrencyPair> = {
-    var result = Set<CurrencyPair>()
+internal let allValidCurrencyPairs: Set<RateCurrencyPair> = {
+    var result = Set<RateCurrencyPair>()
     
     let allCurrencies = CurrencyCode.allCases
     allCurrencies.forEach { first in
-        allCurrencies.forEach { second in
-            guard first != second else {
-                return
-            }
-            
-            result.insert(CurrencyPair(first: first, second: second))
-        }
+        result.formUnion(
+            allCurrencies.compactMap { RateCurrencyPair(first: first, second: $0) }
+        )
     }
     
     return result

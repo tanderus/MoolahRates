@@ -14,17 +14,17 @@ import CurrencyCode
 class SelectCurrencyPairTests: XCTestCase {
     
     func testAllValidCurrencyPairs() {
-        let nPairs = allPossibleCurrencyPairs.count
+        let nPairs = allValidCurrencyPairs.count
         let nCurrencies = CurrencyCode.allCases.count
         XCTAssert(nPairs == nCurrencies * (nCurrencies - 1))
-        XCTAssertFalse(allPossibleCurrencyPairs.contains(
+        XCTAssertFalse(allValidCurrencyPairs.contains(
             where: { $0.first == $0.second })
             , "Shouldn't be possible to create a rate-pair with the same currency"
         )
     }
     
     func testIfPossibletoStartWithAllPairsUsed() {
-        let allPairs = allPossibleCurrencyPairs
+        let allPairs = allValidCurrencyPairs
         let flag = SelectCurrencyPairFlow.Coordinator.isPossibleToStart(alreadyUsedPairs: allPairs)
         XCTAssertFalse(flag, "Shouldn't be possible to run flow if all possible rates are already created")
     }

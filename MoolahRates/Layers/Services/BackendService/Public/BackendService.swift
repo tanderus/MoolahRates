@@ -12,7 +12,7 @@ import CurrencyRate
 public protocol BackendService {
     
     func downloadLatestRatesForPairs(
-        currencyPairs: Set<CurrencyPair>
+        currencyPairs: Set<RateCurrencyPair>
         , endpoint: BackendEndpoint
         , completion: @escaping (Result<Set<CurrencyRate>, BackendError>) -> Void
     )

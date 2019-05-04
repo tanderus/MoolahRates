@@ -11,7 +11,7 @@ import CurrencyRate
 
 class RatesIoDecoder {
     
-    func ratesFromData(_ data: Data, using pairs: Set<CurrencyPair>) -> Set<CurrencyRate>? {
+    func ratesFromData(_ data: Data, using pairs: Set<RateCurrencyPair>) -> Set<CurrencyRate>? {
         let decoder = JSONDecoder()
         do {
             let json = try decoder.decode(RatesIoResponse.self, from: data)
@@ -32,8 +32,8 @@ class RatesIoDecoder {
                     
                     if let reversedRate = received[pair.first]
                         , !reversedRate.rate.isZero
-                        , let rate = CurrencyRate(pair, rate: 1 / reversedRate.rate)
                     {
+                        let rate = CurrencyRate(pair, rate: 1 / reversedRate.rate)
                         result.insert(rate)
                     }
                     
@@ -63,10 +63,7 @@ class RatesIoDecoder {
                 }
                 
                 let rate = (1 / baseToFirstRate.rate) / (1 / baseToTargetRate.rate)
-                guard let currencyRate = CurrencyRate(pair, rate: rate) else {
-                    return
-                }
-                
+                let currencyRate = CurrencyRate(pair, rate: rate)
                 result.insert(currencyRate)
             }
             

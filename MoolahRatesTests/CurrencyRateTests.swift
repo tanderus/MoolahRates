@@ -21,10 +21,6 @@ class CurrencyRateTests: XCTestCase {
             , "Shouldn't initialize for the same currency"
         )
         XCTAssertNil(
-            CurrencyRate(CurrencyPair(first: EUR, second: EUR), rate: rate)
-            , "Shouldn't initialize for the same currency"
-        )
-        XCTAssertNil(
             CurrencyRate("\(EUR)", secondCode: "\(EUR)", rate: rate)
             , "Shouldn't initialize for the same currency"
         )
@@ -57,9 +53,8 @@ class CurrencyRateTests: XCTestCase {
             CurrencyRate("\(EUR)", secondCode: "\(RUB)", rate: rate)
             , "Should initialize normally"
         )
-        XCTAssertNotNil(
-            CurrencyRate(CurrencyPair(first: EUR, second: RUB), rate: rate)
-            , "Should initialize normally"
-        )
+        
+        let pair = RateCurrencyPair(first: EUR, second: RUB)
+        XCTAssertNotNil(pair, "Should initialize normally")
     }
 }
