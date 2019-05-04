@@ -81,9 +81,21 @@ public final class Coordinator {
     }
     
     private func didRequestAddRate() {
-        
         let pairs = self.database.latestRatesSorted.map { $0.currencyPair }
-        self.newRateCoordinator = SelectCurrencyPairFlow.Coordinator(self.navigationController, alreadyUsedPairs: Set(pairs))
+        let pairsSet = Set(pairs)
+        guard SelectCurrencyPairFlow.Coordinator.isPossibleToStart(alreadyUsedPairs: pairsSet) else {
+            let alert = UIAlertController(
+                title: "No more available"
+                , message: "Seems like you've created all the possible rates. Congratulations!"
+                , preferredStyle: .alert
+            )
+            let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(ok)
+            self.navigationController.present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        self.newRateCoordinator = SelectCurrencyPairFlow.Coordinator(self.navigationController, alreadyUsedPairs: pairsSet)
         self.newRateCoordinator.didSelectCurrencyPair = self.didSelectNewCurrencyPair
         self.newRateCoordinator.start()
     }
