@@ -14,8 +14,9 @@ public final class Coordinator {
     
     public init(
         _ navigationController: UINavigationController
+        , disabledCurrency: Set<CurrencyCode>
         , didSelectCurrency: @escaping (CurrencyCode) -> Void
-        , shouldPushOnStart: Bool
+        , shouldPushOnStart: Bool = false
         ) {
         self.navigationController = navigationController
         self.shouldPushOnStart = shouldPushOnStart
@@ -23,7 +24,17 @@ public final class Coordinator {
         let viewController = SelectCurrencyViewController.instantiateViaStoryboard()
         self.viewController = viewController
         
-        viewController.didSelectCurrency = didSelectCurrency
+        let presenter = Presenter(disabledCurrency)
+        presenter.didSelectCurrency = didSelectCurrency
+        
+        self.presenter = presenter
+        viewController.afterViewDidLoad = { [weak viewController] in
+            guard let tableView = viewController?.tableView else {
+                return
+            }
+            
+            presenter.showCurrenciesOn(tableView)
+        }
     }
     
     public func start() {
@@ -38,4 +49,5 @@ public final class Coordinator {
     internal let navigationController: UINavigationController
     internal let shouldPushOnStart: Bool
     internal let viewController: SelectCurrencyViewController
+    internal let presenter: Presenter
 }

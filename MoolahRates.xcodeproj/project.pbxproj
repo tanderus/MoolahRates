@@ -58,6 +58,7 @@
 		519F827E227D7D5D00F3D586 /* SelectCurrencyPairFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 519F8277227D7D5C00F3D586 /* SelectCurrencyPairFlow.framework */; };
 		519F827F227D7D5D00F3D586 /* SelectCurrencyPairFlow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 519F8277227D7D5C00F3D586 /* SelectCurrencyPairFlow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		519F828C227D7DCE00F3D586 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F828B227D7DCE00F3D586 /* Coordinator.swift */; };
+		519F8291227D85BE00F3D586 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F8290227D85BE00F3D586 /* Presenter.swift */; };
 		51A5285B22799D1F00700158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A5285A22799D1F00700158 /* AppDelegate.swift */; };
 		51A5286222799D2100700158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A5286122799D2100700158 /* Assets.xcassets */; };
 		51A5287522799E4300700158 /* HomeScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 51A5287322799E4300700158 /* HomeScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -335,6 +336,7 @@
 		519F8279227D7D5D00F3D586 /* SelectCurrencyPairFlow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SelectCurrencyPairFlow.h; sourceTree = "<group>"; };
 		519F827A227D7D5D00F3D586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		519F828B227D7DCE00F3D586 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		519F8290227D85BE00F3D586 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		51A5285722799D1F00700158 /* MoolahRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoolahRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A5285A22799D1F00700158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51A5286122799D2100700158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -545,10 +547,8 @@
 		513D5A97227C02BC00D70DE6 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
-				513D5A98227C02CF00D70DE6 /* SelectCurrencyViewController.swift */,
-				513D5AA0227C03E900D70DE6 /* CurrencyCell.swift */,
-				513D5A9C227C030500D70DE6 /* Assets.xcassets */,
-				513D5A9E227C035D00D70DE6 /* Main.storyboard */,
+				519F8292227D85DA00F3D586 /* Presenter */,
+				519F828F227D85A500F3D586 /* View */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -716,6 +716,25 @@
 			children = (
 			);
 			path = Internal;
+			sourceTree = "<group>";
+		};
+		519F828F227D85A500F3D586 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				513D5A98227C02CF00D70DE6 /* SelectCurrencyViewController.swift */,
+				513D5AA0227C03E900D70DE6 /* CurrencyCell.swift */,
+				513D5A9C227C030500D70DE6 /* Assets.xcassets */,
+				513D5A9E227C035D00D70DE6 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		519F8292227D85DA00F3D586 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				519F8290227D85BE00F3D586 /* Presenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		51A5284E22799D1F00700158 = {
@@ -1460,6 +1479,7 @@
 			files = (
 				513D5AA1227C03E900D70DE6 /* CurrencyCell.swift in Sources */,
 				513D5A99227C02CF00D70DE6 /* SelectCurrencyViewController.swift in Sources */,
+				519F8291227D85BE00F3D586 /* Presenter.swift in Sources */,
 				513D5AA3227C04D800D70DE6 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

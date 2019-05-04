@@ -13,7 +13,17 @@ import UIKit
 
 public final class Coordinator {
     
-    public init(_ baseViewController: UIViewController) {
+    public class func isPossibleToStart(alreadyUsedPairs: Set<CurrencyPair>) -> Bool {
+        let allPossible = allPossibleCurrencyPairs
+        let remaining = allPossible.subtracting(alreadyUsedPairs)
+        return remaining.count > 0
+    }
+    
+    public init?(_ baseViewController: UIViewController, alreadyUsedPairs pairs: Set<CurrencyPair>) {
+        guard Coordinator.isPossibleToStart(alreadyUsedPairs: pairs) else {
+            return nil
+        }
+        
         self.baseViewController = baseViewController
         
         self.navigationController = UINavigationController()
@@ -21,16 +31,22 @@ public final class Coordinator {
         
         self.firstCurrencyCoordinator = SelectCurrencyScreen.Coordinator(
             self.navigationController
+            , disabledCurrency: Coordinator.leftDisabledCurrencyForPairs(pairs)
             , didSelectCurrency: { code in
                 print("Did select currency \(code)")
             }
-            , shouldPushOnStart: false
         )
     }
     
     public func start() {
         self.firstCurrencyCoordinator.start()
         self.baseViewController.present(self.navigationController, animated: true, completion: nil)
+    }
+    
+    private class func leftDisabledCurrencyForPairs(_ pairs: Set<CurrencyPair>) -> Set<CurrencyCode> {
+        let remainingPairs = allPossibleCurrencyPairs.subtracting(pairs)
+        let remainingCurrency = remainingPairs.map { $0.first }
+        return Set(CurrencyCode.allCases).subtracting(remainingCurrency)
     }
     
     internal let baseViewController: UIViewController
