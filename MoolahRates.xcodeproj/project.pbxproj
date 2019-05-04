@@ -532,10 +532,8 @@
 		513D5AC5227C16C700D70DE6 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				51CCABD12279DEFF0056C4D9 /* StoryboardInstantiatable */,
-				51A5287222799E4300700158 /* HomeScreen */,
-				513D5A8B227C02AB00D70DE6 /* SelectCurrencyScreen */,
-				513D5AAC227C0C1400D70DE6 /* CalculatorScreen */,
+				519F8270227D7C1A00F3D586 /* Screens */,
+				519F8271227D7C2700F3D586 /* Utils */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -621,6 +619,24 @@
 				51E2059C227AD18700E0046C /* CurrencyRate */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		519F8270227D7C1A00F3D586 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				51A5287222799E4300700158 /* HomeScreen */,
+				513D5A8B227C02AB00D70DE6 /* SelectCurrencyScreen */,
+				513D5AAC227C0C1400D70DE6 /* CalculatorScreen */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		519F8271227D7C2700F3D586 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				51CCABD12279DEFF0056C4D9 /* StoryboardInstantiatable */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		51A5284E22799D1F00700158 = {
@@ -1578,7 +1594,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/SelectCurrencyScreen/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/Screens/SelectCurrencyScreen/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1609,7 +1625,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/SelectCurrencyScreen/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/Screens/SelectCurrencyScreen/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1639,7 +1655,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/CalculatorScreen/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/Screens/CalculatorScreen/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1670,7 +1686,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/CalculatorScreen/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/Screens/CalculatorScreen/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1923,7 +1939,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/HomeScreen/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/Screens/HomeScreen/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1955,7 +1971,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/HomeScreen/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/Screens/HomeScreen/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1985,7 +2001,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/StoryboardInstantiatable/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/Utils/StoryboardInstantiatable/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2016,7 +2032,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/StoryboardInstantiatable/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/MoolahRates/Layers/UI/Utils/StoryboardInstantiatable/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
