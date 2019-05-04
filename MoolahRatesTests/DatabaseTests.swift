@@ -197,5 +197,20 @@ class DatabaseTests: XCTestCase {
         wait(for: [expect], timeout: 10)
     }
     
+    override func tearDown() {
+        DispatchQueue.main.async {
+            let order = self.database.ratesOrder
+            let context = self.database.persistentContainer.viewContext
+            context.delete(order)
+            do {
+                try context.save()
+                print("DatabaseTests.swift: tearDown() success")
+            }
+            catch {
+                print("DatabaseTests.swift: Failed to tearDown database: Reason: '\(error.localizedDescription)'")
+            }
+        }
+    }
+    
     private let database = DatabaseImplementation()
 }
