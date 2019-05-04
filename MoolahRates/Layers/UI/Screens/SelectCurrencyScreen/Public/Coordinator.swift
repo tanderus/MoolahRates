@@ -12,10 +12,11 @@ import StoryboardInstantiatable
 
 public final class Coordinator {
     
+    public var didSelectCurrency: ((CurrencyCode) -> Void)!
+    
     public init(
         _ navigationController: UINavigationController
         , disabledCurrency: Set<CurrencyCode>
-        , didSelectCurrency: @escaping (CurrencyCode) -> Void
         , shouldPushOnStart: Bool = false
         ) {
         self.navigationController = navigationController
@@ -25,9 +26,12 @@ public final class Coordinator {
         self.viewController = viewController
         
         let presenter = Presenter(disabledCurrency)
-        presenter.didSelectCurrency = didSelectCurrency
-        
         self.presenter = presenter
+        
+        presenter.didSelectCurrency = { [weak self] code in
+            self?.didSelectCurrency(code)
+        }
+        
         viewController.afterViewDidLoad = { [weak viewController] in
             guard let tableView = viewController?.tableView else {
                 return

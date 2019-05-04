@@ -14,10 +14,12 @@ import UIKit
 
 public final class Coordinator {
     
+    public var didSelectCurrencyPair: ((RateCurrencyPair) -> Void)!
+    
     public class func isPossibleToStart(alreadyUsedPairs: Set<RateCurrencyPair>) -> Bool {
-        let allCurrencies = CurrencyCode.allCases
-        let disabled = self.leftDisabledCurrencyForPairs(alreadyUsedPairs)
-        return disabled.count < allCurrencies.count
+        let allValid = allValidCurrencyPairs
+        let remaining = allValid.subtracting(alreadyUsedPairs)
+        return remaining.count > 0
     }
     
     public init?(_ baseViewController: UIViewController, alreadyUsedPairs pairs: Set<RateCurrencyPair>) {
@@ -26,6 +28,7 @@ public final class Coordinator {
         }
         
         self.baseViewController = baseViewController
+        self.alreadyUsedPairs = pairs
         
         self.navigationController = UINavigationController()
         self.navigationController.isNavigationBarHidden = true
@@ -33,10 +36,9 @@ public final class Coordinator {
         self.firstCurrencyCoordinator = SelectCurrencyScreen.Coordinator(
             self.navigationController
             , disabledCurrency: Coordinator.leftDisabledCurrencyForPairs(pairs)
-            , didSelectCurrency: { code in
-                print("Did select currency \(code)")
-            }
         )
+        
+        self.firstCurrencyCoordinator.didSelectCurrency = self.didSelectFirstCurrency
     }
     
     public func start() {
@@ -47,10 +49,37 @@ public final class Coordinator {
     private class func leftDisabledCurrencyForPairs(_ pairs: Set<RateCurrencyPair>) -> Set<CurrencyCode> {
         let remainingPairs = allValidCurrencyPairs.subtracting(pairs)
         let remainingCurrency = remainingPairs.map { $0.first }
-        return Set(CurrencyCode.allCases).subtracting(remainingCurrency)
+        return CurrencyCode.allCasesSet.subtracting(remainingCurrency)
+    }
+    
+    private class func rightDisabledCurrencyForPairs(_ pairs: Set<RateCurrencyPair>, firstCurrency: CurrencyCode) -> Set<CurrencyCode> {
+        let remainingPairs = allValidCurrencyPairs.subtracting(pairs)
+        let remainingWithFirst = remainingPairs.filter { $0.first == firstCurrency }
+        let enabled = Set(remainingWithFirst.map { $0.second })
+        return CurrencyCode.allCasesSet.subtracting(enabled)
+    }
+    
+    private func didSelectFirstCurrency(_ firstCurrency: CurrencyCode) {
+        let disabled = Coordinator.rightDisabledCurrencyForPairs(
+            self.alreadyUsedPairs
+            , firstCurrency: firstCurrency
+        )
+        
+        self.secondCurrencyCoordinator = SelectCurrencyScreen.Coordinator(
+            self.navigationController
+            , disabledCurrency: disabled
+            , shouldPushOnStart: true
+        )
+        self.secondCurrencyCoordinator?.didSelectCurrency = { [weak self] second in
+            let pair = RateCurrencyPair(first: firstCurrency, second: second)!
+            self?.didSelectCurrencyPair(pair)
+        }
+        self.secondCurrencyCoordinator?.start()
     }
     
     internal let baseViewController: UIViewController
+    internal let alreadyUsedPairs: Set<RateCurrencyPair>
+    
     internal let navigationController: UINavigationController
     
     internal let firstCurrencyCoordinator: SelectCurrencyScreen.Coordinator

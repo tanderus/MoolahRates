@@ -22,4 +22,8 @@ public enum CurrencyCode: String, RawRepresentable, CaseIterable {
     case RUB
     case SGD
     case HKD
+    
+    public static var allCasesSet: Set<CurrencyCode> {
+        return Set(self.allCases)
+    }
 }
