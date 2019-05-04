@@ -78,6 +78,7 @@
 		51A528A12279A17A00700158 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A528A02279A17A00700158 /* Main.storyboard */; };
 		51C50AE6227DD801006A1FD9 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C50AE5227DD801006A1FD9 /* ViewModel.swift */; };
 		51C50AE8227DD826006A1FD9 /* ViewModelImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C50AE7227DD826006A1FD9 /* ViewModelImplementation.swift */; };
+		51C50AEA227DE549006A1FD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51C50AE9227DE549006A1FD9 /* LaunchScreen.storyboard */; };
 		51CC0D272279FBBA00503D90 /* LocalizedName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC0D262279FBBA00503D90 /* LocalizedName.swift */; };
 		51CC0D2A2279FBEE00503D90 /* BundleWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51CC0D292279FBEE00503D90 /* BundleWrapper.swift */; };
 		51CCABD42279DEFF0056C4D9 /* StoryboardInstantiatable.h in Headers */ = {isa = PBXBuildFile; fileRef = 51CCABD22279DEFF0056C4D9 /* StoryboardInstantiatable.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -387,6 +388,7 @@
 		51A528A02279A17A00700158 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		51C50AE5227DD801006A1FD9 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		51C50AE7227DD826006A1FD9 /* ViewModelImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelImplementation.swift; sourceTree = "<group>"; };
+		51C50AE9227DE549006A1FD9 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51CC0D262279FBBA00503D90 /* LocalizedName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedName.swift; sourceTree = "<group>"; };
 		51CC0D292279FBEE00503D90 /* BundleWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleWrapper.swift; sourceTree = "<group>"; };
 		51CCABD02279DEFF0056C4D9 /* StoryboardInstantiatable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StoryboardInstantiatable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -850,6 +852,7 @@
 				51A5285A22799D1F00700158 /* AppDelegate.swift */,
 				519F8241227D776300F3D586 /* Layers */,
 				51A5286122799D2100700158 /* Assets.xcassets */,
+				51C50AE9227DE549006A1FD9 /* LaunchScreen.storyboard */,
 				51A5286622799D2100700158 /* Info.plist */,
 			);
 			path = MoolahRates;
@@ -1441,6 +1444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51A5286222799D2100700158 /* Assets.xcassets in Resources */,
+				51C50AEA227DE549006A1FD9 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2279,7 +2283,6 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = QCADF8QGVG;
 				INFOPLIST_FILE = MoolahRates/Info.plist;
@@ -2301,7 +2304,6 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = QCADF8QGVG;
