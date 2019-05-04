@@ -59,6 +59,7 @@
 		519F827F227D7D5D00F3D586 /* SelectCurrencyPairFlow.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 519F8277227D7D5C00F3D586 /* SelectCurrencyPairFlow.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		519F828C227D7DCE00F3D586 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F828B227D7DCE00F3D586 /* Coordinator.swift */; };
 		519F8291227D85BE00F3D586 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F8290227D85BE00F3D586 /* Presenter.swift */; };
+		519F8294227D997900F3D586 /* SelectCurrencyPairTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519F8293227D997900F3D586 /* SelectCurrencyPairTests.swift */; };
 		51A5285B22799D1F00700158 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A5285A22799D1F00700158 /* AppDelegate.swift */; };
 		51A5286222799D2100700158 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A5286122799D2100700158 /* Assets.xcassets */; };
 		51A5287522799E4300700158 /* HomeScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = 51A5287322799E4300700158 /* HomeScreen.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -209,6 +210,13 @@
 			remoteGlobalIDString = 519F8276227D7D5C00F3D586;
 			remoteInfo = SelectCurrencyPairFlow;
 		};
+		519F8295227D998300F3D586 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 519F8276227D7D5C00F3D586;
+			remoteInfo = SelectCurrencyPairFlow;
+		};
 		51A5287622799E4300700158 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 51A5284F22799D1F00700158 /* Project object */;
@@ -337,6 +345,7 @@
 		519F827A227D7D5D00F3D586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		519F828B227D7DCE00F3D586 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		519F8290227D85BE00F3D586 /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		519F8293227D997900F3D586 /* SelectCurrencyPairTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCurrencyPairTests.swift; sourceTree = "<group>"; };
 		51A5285722799D1F00700158 /* MoolahRates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoolahRates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A5285A22799D1F00700158 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51A5286122799D2100700158 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -904,6 +913,7 @@
 				51E205AE227AD50300E0046C /* CurrencyRateTests.swift */,
 				5138E69C227C79DC00577025 /* DatabaseTests.swift */,
 				519F823F227D6E0E00F3D586 /* BackendTests.swift */,
+				519F8293227D997900F3D586 /* SelectCurrencyPairTests.swift */,
 				51F16913227A15C600DA8719 /* Info.plist */,
 			);
 			path = MoolahRatesTests;
@@ -1226,6 +1236,7 @@
 				51E205A8227AD1A300E0046C /* PBXTargetDependency */,
 				5138E69B227C79C400577025 /* PBXTargetDependency */,
 				519F823E227D6DF000F3D586 /* PBXTargetDependency */,
+				519F8296227D998300F3D586 /* PBXTargetDependency */,
 			);
 			name = MoolahRatesTests;
 			productName = MoolahRatesTests;
@@ -1568,6 +1579,7 @@
 				5138E69D227C79DC00577025 /* DatabaseTests.swift in Sources */,
 				51E205AF227AD50300E0046C /* CurrencyRateTests.swift in Sources */,
 				51F16912227A15C600DA8719 /* CurrencyCodeTests.swift in Sources */,
+				519F8294227D997900F3D586 /* SelectCurrencyPairTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1658,6 +1670,11 @@
 			isa = PBXTargetDependency;
 			target = 519F8276227D7D5C00F3D586 /* SelectCurrencyPairFlow */;
 			targetProxy = 519F828D227D80B700F3D586 /* PBXContainerItemProxy */;
+		};
+		519F8296227D998300F3D586 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 519F8276227D7D5C00F3D586 /* SelectCurrencyPairFlow */;
+			targetProxy = 519F8295227D998300F3D586 /* PBXContainerItemProxy */;
 		};
 		51A5287722799E4300700158 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
